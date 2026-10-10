@@ -1,6 +1,6 @@
 # Numena: Brand Guide
 
-A working reference. Each section here condenses a full document under `brand-foundation/`; use the linked doc when you need the reasoning behind a rule.
+A working reference. Each section here condenses a full document in `docs/`; use the linked doc when you need the reasoning behind a rule.
 
 ## Identity
 
@@ -80,8 +80,8 @@ Proportion on a typical screen: foundation 80–90%, deep purple 8–15%, bright
 
 ## Where it lives
 
-- `brand-foundation/brand-foundation.md` — purpose, philosophy, positioning, values, boundary, naming.
-- `brand-foundation/tone-of-voice.md` — voice principles, word lists, example pairs.
-- `brand-foundation/color-system.md` — palette, proportion, contrast ratios, usage guide.
-- `brand-foundation/typography.md` — typefaces, scale, hierarchy, spacing, accessibility.
-- `brand-foundation/iconography.md` — role, specs, sizes, states, core icon set.
+- `docs/01-brand-foundation.md` — purpose, philosophy, positioning, values, boundary, naming.
+- `docs/02-tone-of-voice.md` — voice principles, word lists, example pairs.
+- `docs/03-color-system.md` — palette, proportion, contrast ratios, usage guide.
+- `docs/04-typography.md` — typefaces, scale, hierarchy, spacing, accessibility.
+- `docs/05-iconography.md` — role, specs, sizes, states, core icon set.
