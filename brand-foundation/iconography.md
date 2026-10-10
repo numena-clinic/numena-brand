@@ -4,7 +4,7 @@ Icons in Numena are quiet helpers. They support the words, mark a few repeating 
 
 ## Role of icons and why Iconoir
 
-Icons do three jobs in Numena: they speed up scanning, they mark a few ideas that repeat, and they give dense screens a little visual rhythm. They do not carry meaning alone, they do not decorate, and they never deliver a verdict.
+Icons speed up scanning and give dense screens a little visual rhythm. They do not carry meaning alone, they do not decorate, and they never deliver a verdict.
 
 **Why Iconoir.**
 

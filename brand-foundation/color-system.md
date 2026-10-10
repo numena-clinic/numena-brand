@@ -26,7 +26,7 @@ Each color has one job. The meaning is what we intend it to signal, and consiste
 | Bright cyan | #47DDF3 | Openness and exploration | Connection | Something links outward to a source or another idea. |
 | Bright lilac | #AE6DF0 | Expressiveness | Focus | Where attention is right now, and the occasional signature moment. |
 
-The jobs for cyan and lilac are proposals. They take the intended qualities and pin each to a function, so they can be used the same way every time. Product should confirm them (see Open questions).
+The jobs for cyan and lilac are proposals. They take the intended qualities and pin each to a function, so they can be used the same way every time. Product should confirm them.
 
 **Why purple leads.** Discernment is the first brand quality, and deep purple is the darkest, most saturated color in the set. It carries visual weight, so it naturally becomes the identity and the primary action. The paler and brighter colors then read as support.
 
@@ -54,7 +54,7 @@ Three tiers, from most to least present. The shares are starting guidance for a 
 
 ## Accessibility
 
-The deep purple and lavender anchor passes everywhere. The bright accents do not pass as text on light surfaces, so they work as fills and marks, paired with a dark color for any words.
+Deep purple and pale lavender pass in every pairing in the table below. The bright accents fail as body text and thin lines on light surfaces, so they work as fills and marks, with any words set in a dark color. Lilac is the exception: it passes for large text on white and deep purple, which is why focus rings and large shapes use it.
 
 Ratios use the WCAG 2.x contrast formula. Body text needs 4.5:1. Large text (about 18 pt, or 14 pt bold) and interface elements need 3:1. Charcoal is the proposed #2B2B33.
 
@@ -84,7 +84,7 @@ Ratios use the WCAG 2.x contrast formula. Body text needs 4.5:1. Large text (abo
 - Lilac works for large shapes, icons, and focus rings on white (3.4). It fails on lavender (2.8), so a lilac mark on a lavender panel needs a darker outline or a different surface.
 - Never carry meaning by color alone. A cyan source link also needs an icon or underline, and a lilac selection also needs a shape change such as a border or weight.
 
-Not yet checked: color-blindness simulation, dark mode, and APCA contrast. They are listed under Open questions.
+Not yet checked: color-blindness simulation, dark mode, and APCA contrast.
 
 ## Usage guide
 

@@ -16,7 +16,7 @@ A thoughtful space for better clinical reasoning.
 
 ## Philosophy
 
-Five beliefs sit under everything Numena makes. Each one names a mechanism, so it can guide decisions later.
+Five beliefs ground everything Numena makes. Each one names a mechanism, so it can guide decisions later.
 
 1. **Reasoning is a chain, and chains can be inspected.** A case moves from observation to theme to hypothesis to evidence to decision. Each link can be strong or weak. Errors tend to hide in the links nobody looks at, so Numena makes every link visible.
 2. **Traceability makes judgment checkable.** A theme that cannot show where it came from cannot be told apart from habit or assumption. When a clinician selects a theme, they should see the source material and the reasoning behind it.
@@ -67,7 +67,7 @@ Numena supports professional judgment. It does not replace it.
 
 **Why this is part of the brand, not only a disclaimer.** The boundary is what makes traceability worth trusting. A tool that quietly concluded things would make the trace pointless. A tool that only shows its source and its reasoning leaves the judgment where it belongs.
 
-**How it shows up.** Verbs describe what the clinician does ("link", "revise", "decide"). Nothing implies urgency, safety monitoring, or a verdict. Formal legal wording needs review by someone qualified, and sits in the product and terms, not in the brand voice.
+**How it shows up.** Verbs describe what the clinician does ("link", "revise", "decide"). Nothing implies urgency, safety monitoring, or a verdict. Formal legal wording needs review by someone qualified, and belongs in the product and terms, not in the brand voice.
 
 ## Naming and messaging
 

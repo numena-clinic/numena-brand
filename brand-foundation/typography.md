@@ -89,7 +89,7 @@ Readers pick up hierarchy by contrast, in a fixed order: size first, then weight
 6. Headlines are charcoal by default. Deep purple is allowed for an H1 on a brand moment. Link and button colors come from the color system.
 7. The same role gets the same style everywhere. A button label is one style on every page, defined once as a token.
 
-**One weak spot to watch.** H4 (20, Medium) and Body large (18, Regular) are close in size. They are separated by weight and by the space above the heading. Do not set an H4 directly against Body large on mobile, where H4 drops to 18. Use Body (16) there.
+**One weak spot to watch.** H4 (20 px, Medium) and Body large (18 px, Regular) are close in size. They are separated by weight and by the space above the heading. Do not set an H4 directly against Body large on mobile, where H4 drops to 18 px. Use Body (16 px) there.
 
 ## Measure and spacing
 

@@ -2,7 +2,7 @@
 
 We take complex human work seriously. But we don't need to sound complicated to prove it.
 
-Our voice is thoughtful, clear and grounded. It respects the intelligence of psychologists without trying to impress them with jargon. It gives people room to think, while helping them see connections, question assumptions and make better-informed decisions.
+Our voice is thoughtful, clear and grounded. It respects the intelligence of psychologists without trying to impress them with jargon. It gives people room to think. It helps them see connections, question assumptions and make better-informed decisions.
 
 We're not trying to sound like a medical institution, an AI company, or a productivity tool.
 
