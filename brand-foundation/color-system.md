@@ -111,15 +111,3 @@ Not yet checked: color-blindness simulation, dark mode, and APCA contrast. They 
 - Peach next to red or green status colors. It will read as part of a warning system.
 
 Semantic colors are not defined yet. Success, warning, and error states need their own colors, kept apart from the five brand colors. Two constraints apply. First, none of them should sit close to peach, so peach is never mistaken for a warning. Second, clinical content such as themes, hypotheses, and evidence should not use red or green at all, since that would imply a verdict, which Numena does not give. Reserve status colors for system states like saving, errors, and connection problems.
-
-## Open questions
-
-- [ ] **Signature color.** Is deep purple final? It currently leads, but it is still a candidate.
-- [ ] **Cyan and lilac jobs.** Confirm "connection" for cyan and "focus" for lilac. Cyan as a trace color depends on traceability being visible in the product.
-- [ ] **Charcoal.** Confirm or replace the proposed #2B2B33.
-- [ ] **Semantic colors.** Choose success, warning, and error colors that stay away from peach and never touch clinical content.
-- [ ] **Tint and shade scale.** Hover, pressed, disabled, and border states need steps of purple and lavender. Next step toward tokens.
-- [ ] **Dark mode.** Does Numena need one? Deep purple will need a lighter counterpart, and the bright accents change roles on dark surfaces.
-- [ ] **Color-blindness check.** Deep purple, lilac, and cyan should be simulated for the common types before launch.
-- [ ] **Lilac on lavender.** Decide the fix: a darker outline, a different surface, or a darker lilac for UI use.
-- [ ] **Print and grayscale.** Reports and exports may lose color, so each meaning needs a non-color backup.
