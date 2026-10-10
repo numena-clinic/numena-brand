@@ -52,37 +52,6 @@ A value only helps when it settles a real decision. Each one below is written as
 | Reflection | Room to pause and revisit | Speed and throughput | Whether a feature adds a prompt or leaves space |
 | Openness | Hypotheses held loosely, welcome to disconfirming evidence | Settled narratives, one theoretical lens | Whether the product assumes a single way of working |
 
-## Personality and voice
-
-Numena sounds like a careful colleague who is good at asking the next question. Each trait below is a balance between two ways to go wrong.
-
-| Trait | Not this | Because |
-| --- | --- | --- |
-| Clear | Overly clinical | Clinicians already live in technical language. Numena should rest their eyes, not mirror their paperwork. |
-| Thoughtful | Mystical | The work is careful reasoning, not insight from nowhere. No promises of depth, healing, or revelation. |
-| Structured | Bureaucratic | Structure serves the thinking. If a form exists only to be filled in, it goes. |
-| Quietly distinctive | Loud or generic | Distinct through precision and restraint, not slogans or novelty. |
-
-### Voice rules
-
-- Say what happened and what the clinician can do next. Keep sentences short.
-- Name the reasoning step plainly: observation, theme, hypothesis, evidence, decision.
-- Use hedged words when the evidence is partial ("suggests", "working hypothesis"). Never state more than the source supports.
-- Describe what the clinician does, not what Numena discovers.
-
-**Words we use:** reasoning, evidence, working hypothesis, trace, revisit, source, revise.
-
-**Words we avoid:** insights engine, unlock, optimize, transform, journey, healing, best practice, compliance-speak, anything that sounds like a diagnosis or a treatment recommendation.
-
-### Before and after
-
-| Situation | Avoid | Prefer |
-| --- | --- | --- |
-| Describing traceability | "AI-powered insights reveal what your client is really feeling." | "Select a theme to see the notes and sessions it came from." |
-| Describing the product | "Unlock deeper clinical breakthroughs." | "Keep your reasoning in view across sessions." |
-| Empty state | "No data available." | "No hypotheses yet. Add one when you have a working idea. You can revise it as evidence comes in." |
-| Missing source | "Error: required field missing." | "This theme has no source yet. Link a note or observation to keep it traceable." |
-
 ## Boundary
 
 Numena supports professional judgment. It does not replace it.
