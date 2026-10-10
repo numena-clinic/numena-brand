@@ -18,4 +18,4 @@ Read in order — each builds on the one before it.
 
 ## Assets (`assets/`)
 
-Source files for fonts, logo, imagery, and illustrations. Currently kept out of git; they can be added once the licensing and size questions are settled.
+Logo, imagery, and illustrations — committed, owned by Numena (see `assets/README.md` for the per-folder licensing matrix). Fonts (`assets/fonts/`) are commercially licensed web fonts and stay out of this public repo.
