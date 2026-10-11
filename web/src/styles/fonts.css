@@ -1,0 +1,52 @@
+/* Local fonts — Tiempos family (WOFF2) lives in ../../assets/fonts and is
+   referenced in place (never duplicated). Tiempos is a commercially licensed
+   Klim face and is intentionally excluded from the public repo. Albert Sans
+   loads from Google Fonts (SIL OFL 1.1). */
+
+@font-face {
+  font-family: "Tiempos Text";
+  src: url("../../../assets/fonts/TiemposText-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Tiempos Text";
+  src: url("../../../assets/fonts/TiemposText-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Tiempos Headline";
+  src: url("../../../assets/fonts/TiemposHeadline-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Tiempos Headline";
+  src: url("../../../assets/fonts/TiemposHeadline-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Tiempos Fine";
+  src: url("../../../assets/fonts/TiemposFine-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Tiempos Fine";
+  src: url("../../../assets/fonts/TiemposFine-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

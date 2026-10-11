@@ -1,0 +1,197 @@
+@import "./tokens.css";
+@import "./fonts.css";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-h);
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: var(--text-body);
+  line-height: var(--text-body-line);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+h4 {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: var(--color-link);
+  text-underline-offset: 0.18em;
+}
+
+a:hover {
+  text-decoration-thickness: 0.08em;
+}
+
+/* Lilac carries the brand cue; the charcoal halo guarantees the ring keeps
+   3:1 against every surface — lilac alone fails on pale lavender (2.8). */
+:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 5px rgba(43, 43, 51, 0.85);
+  border-radius: 2px;
+}
+
+::selection {
+  background: var(--pale-lavender);
+  color: var(--charcoal);
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Layout shell */
+.shell {
+  width: min(100%, var(--content-max));
+  margin-inline: auto;
+  padding-inline: clamp(20px, 6vw, 64px);
+}
+
+.section {
+  padding-block: clamp(80px, 11vw, 150px);
+  border-top: 1px solid var(--color-rule);
+}
+
+.section-kicker {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-md);
+  margin-bottom: var(--space-xxl);
+  font-size: var(--text-label);
+  font-weight: 500;
+  line-height: var(--text-label-line);
+  color: var(--color-text-soft);
+}
+
+.section-kicker::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--color-rule);
+}
+
+.section-numeral {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Headings */
+.display {
+  font-size: clamp(2.75rem, 2.3rem + 2.4vw, 4.25rem);
+  line-height: 1.06;
+  text-wrap: balance;
+}
+
+.h2 {
+  font-size: var(--text-h2);
+  line-height: var(--text-h2-line);
+}
+
+.h3 {
+  font-size: var(--text-h3);
+  line-height: var(--text-h3-line);
+}
+
+.body-large {
+  font-size: var(--text-body-large);
+  line-height: var(--text-body-large-line);
+}
+
+.measure {
+  max-width: var(--measure);
+}
+
+.display-balance {
+  text-wrap: balance;
+}
+
+.caption {
+  font-size: var(--text-caption);
+  line-height: var(--text-caption-line);
+  letter-spacing: 0.01em;
+  color: var(--color-text-soft);
+}
+
+.label {
+  font-size: var(--text-label);
+  font-weight: 500;
+  line-height: var(--text-label-line);
+}
+
+/* Entrance reveal — JS toggles .is-visible via IntersectionObserver */
+.reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  padding: var(--space-xs) var(--space-md);
+  background: var(--color-primary);
+  color: var(--color-inverse);
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  left: var(--space-md);
+  top: var(--space-md);
+}

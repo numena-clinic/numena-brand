@@ -1,2 +1,5 @@
 .DS_Store
 assets/fonts/
+web/node_modules/
+web/dist/
+*.woff2
