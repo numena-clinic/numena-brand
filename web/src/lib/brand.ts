@@ -44,8 +44,19 @@ function frontmatter(markdown: string): Record<string, string> {
   return data;
 }
 
-function render(markdown: string): string {
-  return marked.parse(stripFrontMatter(markdown), { async: false }) as string;
+// Docs cross-link each other with relative .md paths (e.g. `./typography.md`,
+// `../color.md`). Rewrite them to the site's document routes so they resolve.
+function rewriteDocLinks(html: string, sectionId: string): string {
+  return html.replace(/href="([^"]*?\.md)(#[^"]*)?"/gi, (match, path, hash = "") => {
+    if (/^[a-z]+:\/\//i.test(path)) return match;
+    const name = path.replace(/^.*\//, "").replace(/\.md$/i, "");
+    return `href="/${sectionId}/${name}${hash}"`;
+  });
+}
+
+function render(markdown: string, sectionId = ""): string {
+  const html = marked.parse(stripFrontMatter(markdown), { async: false }) as string;
+  return sectionId ? rewriteDocLinks(html, sectionId) : html;
 }
 
 function sectionDirs(): string[] {
@@ -71,7 +82,7 @@ export function getSections(): Section[] {
           slug,
           path: `${id}/${slug}`,
           title: fm.title || titleize(slug),
-          html: render(markdown),
+          html: render(markdown, id),
         };
       });
     return { id, name: titleize(id), items };

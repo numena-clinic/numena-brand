@@ -37,6 +37,12 @@
       "index": "docs/visual-identity/README.md",
       "documents": [
         {
+          "id": "graphic-language",
+          "path": "docs/visual-identity/graphic-language.md",
+          "title": "Graphic Language",
+          "summary": "Defines how the visual elements behave together — the relationships among shape, color, typography, space, and composition."
+        },
+        {
           "id": "color",
           "path": "docs/visual-identity/color.md",
           "title": "Color System",

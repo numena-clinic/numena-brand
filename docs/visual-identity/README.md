@@ -8,6 +8,7 @@ The goal is to create a recognizable and consistent visual identity without limi
 
 | Document | Purpose |
 |---|---|
+| [`graphic-language.md`](./graphic-language.md) | Defines how the visual elements behave together — the relationships among shape, color, typography, space, and composition. |
 | [`color.md`](./color.md) | Defines the brand color palette, the role of each color, and guidance for its use. |
 | [`typography.md`](./typography.md) | Defines the typefaces, their roles, and the principles governing typographic hierarchy and use. |
 | [`logo-system.md`](./logo-system.md) | Documents the logo assets, available variations, and rules for their application. |

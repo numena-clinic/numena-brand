@@ -155,7 +155,7 @@ Color can be used to:
 - create recognition
 - support interaction
 
-Refer to [`color.md`](../color.md) for the complete color strategy, hierarchy, roles, and accessibility requirements.
+Refer to [`color.md`](./color.md) for the complete color strategy, hierarchy, roles, and accessibility requirements.
 
 ---
 
@@ -362,7 +362,7 @@ The graphic language is one layer of Numena's broader identity system.
 
 The individual identity components then provide the specific rules:
 
-- [`color.md`](../color.md) — color strategy and usage
+- [`color.md`](./color.md) — color strategy and usage
 - [`typography.md`](./typography.md) — typefaces and typographic hierarchy
 - [`logo-system.md`](./logo-system.md) — logo construction and usage
 - [`imagery.md`](./imagery.md) — photographic and visual imagery
