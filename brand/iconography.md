@@ -1,9 +1,9 @@
 ---
 title: Iconography
-section: 05-visual-system
-order: 5
 status: draft
 summary: Role, specs, sizes, states, and the core icon set.
+dependsOn: [foundation, visual-language]
+informs: [web, design-system]
 ---
 
 # Numena: Iconography

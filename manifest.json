@@ -1,248 +1,136 @@
 {
   "name": "Numena: Brand",
-  "description": "The brand identity, voice, and design system for Numena: a workspace for psychologists to connect observations, hypotheses, evidence, and decisions, with every conclusion traceable.",
+  "description": "The brand identity, voice, and visual system for Numena — written as a small set of Markdown documents with an explicit dependency graph.",
   "generator": "scripts/build-manifest.mjs",
   "conventions": {
-    "layout": "Five numbered top-level sections, read in order.",
+    "layout": "Flat brand/ directory; each document is one file.",
     "frontMatter": [
       "title",
-      "section",
-      "order",
       "status",
-      "summary"
+      "summary",
+      "dependsOn",
+      "informs"
     ],
     "status": [
-      "stub",
       "draft",
       "in-review",
       "approved"
     ],
-    "readmes": "Each section README lists its documents in reading order."
+    "readingOrder": "Documents sorted so every dependency is read before the document that needs it.",
+    "authority": "Each decision has one authoritative document; summaries never override their sources."
   },
-  "sections": [
+  "documents": [
     {
-      "id": "01-strategy",
-      "title": "Strategy",
-      "readme": "01-strategy/README.md",
-      "documents": [
-        {
-          "path": "01-strategy/brand-context.md",
-          "title": "Brand context",
-          "order": 1,
-          "status": "stub",
-          "summary": "The context Numena's brand operates in and why it exists."
-        },
-        {
-          "path": "01-strategy/audience.md",
-          "title": "Audience",
-          "order": 2,
-          "status": "stub",
-          "summary": "Who the brand speaks to and what they need."
-        },
-        {
-          "path": "01-strategy/brand-purpose.md",
-          "title": "Brand purpose",
-          "order": 3,
-          "status": "stub",
-          "summary": "Why Numena exists."
-        },
-        {
-          "path": "01-strategy/brand-vision.md",
-          "title": "Brand vision",
-          "order": 4,
-          "status": "stub",
-          "summary": "The future state the brand works toward."
-        },
-        {
-          "path": "01-strategy/brand-positioning.md",
-          "title": "Brand positioning",
-          "order": 5,
-          "status": "stub",
-          "summary": "Where the brand sits and how it differs."
-        },
-        {
-          "path": "01-strategy/brand-promise.md",
-          "title": "Brand promise",
-          "order": 6,
-          "status": "stub",
-          "summary": "The commitment the brand makes to its users."
-        },
-        {
-          "path": "01-strategy/brand-principles.md",
-          "title": "Brand principles",
-          "order": 7,
-          "status": "stub",
-          "summary": "The principles that guide brand decisions."
-        }
+      "id": "foundation",
+      "path": "brand/foundation.md",
+      "title": "Foundation",
+      "status": "draft",
+      "summary": "Why Numena exists, what it believes, who it is for, how it is positioned, the boundary it keeps, and how it talks about itself.",
+      "dependsOn": [],
+      "informs": [
+        "voice",
+        "visual-language",
+        "logo",
+        "color",
+        "typography",
+        "iconography",
+        "web"
       ]
     },
     {
-      "id": "02-meaning",
-      "title": "Meaning",
-      "readme": "02-meaning/README.md",
-      "documents": [
-        {
-          "path": "02-meaning/central-idea.md",
-          "title": "Central idea",
-          "order": 1,
-          "status": "stub",
-          "summary": "The single idea the brand expresses."
-        },
-        {
-          "path": "02-meaning/name-and-origin.md",
-          "title": "Name and origin",
-          "order": 2,
-          "status": "stub",
-          "summary": "The story and meaning behind the name Numena."
-        },
-        {
-          "path": "02-meaning/brand-belief.md",
-          "title": "Brand belief",
-          "order": 3,
-          "status": "stub",
-          "summary": "What the brand believes about its craft and users."
-        },
-        {
-          "path": "02-meaning/brand-story.md",
-          "title": "Brand story",
-          "order": 4,
-          "status": "stub",
-          "summary": "The narrative that carries the brand."
-        },
-        {
-          "path": "02-meaning/semantic-framework.md",
-          "title": "Semantic framework",
-          "order": 5,
-          "status": "stub",
-          "summary": "The system of meanings the brand draws on."
-        }
+      "id": "visual-language",
+      "path": "brand/visual-language.md",
+      "title": "Visual language",
+      "status": "draft",
+      "summary": "How the visual system is applied — restraint, surfaces, accent roles, spacing, and composition.",
+      "dependsOn": [
+        "foundation"
+      ],
+      "informs": [
+        "logo",
+        "color",
+        "typography",
+        "iconography",
+        "web"
       ]
     },
     {
-      "id": "03-character",
-      "title": "Character",
-      "readme": "03-character/README.md",
-      "documents": [
-        {
-          "path": "03-character/brand-personality.md",
-          "title": "Brand personality",
-          "order": 1,
-          "status": "stub",
-          "summary": "The human traits the brand expresses."
-        },
-        {
-          "path": "03-character/character-tensions.md",
-          "title": "Character tensions",
-          "order": 2,
-          "status": "stub",
-          "summary": "The tensions the brand balances."
-        },
-        {
-          "path": "03-character/voice-and-tone.md",
-          "title": "Voice and tone",
-          "order": 3,
-          "status": "stub",
-          "summary": "How the brand writes and speaks."
-        },
-        {
-          "path": "03-character/verbal-identity.md",
-          "title": "Verbal identity",
-          "order": 4,
-          "status": "stub",
-          "summary": "The brand's words, naming, and verbal patterns."
-        }
+      "id": "color",
+      "path": "brand/color.md",
+      "title": "Color",
+      "status": "draft",
+      "summary": "The palette, its intended meaning, proportion, and accessibility rules.",
+      "dependsOn": [
+        "foundation",
+        "visual-language"
+      ],
+      "informs": [
+        "logo",
+        "web",
+        "design-system"
       ]
     },
     {
-      "id": "04-visual-semantics",
-      "title": "Visual semantics",
-      "readme": "04-visual-semantics/README.md",
-      "documents": [
-        {
-          "path": "04-visual-semantics/creative-direction.md",
-          "title": "Creative direction",
-          "order": 1,
-          "status": "stub",
-          "summary": "The creative territory and direction."
-        },
-        {
-          "path": "04-visual-semantics/visual-concepts.md",
-          "title": "Visual concepts",
-          "order": 2,
-          "status": "stub",
-          "summary": "The visual ideas explored."
-        },
-        {
-          "path": "04-visual-semantics/visual-rationale.md",
-          "title": "Visual rationale",
-          "order": 3,
-          "status": "stub",
-          "summary": "Why the chosen visual direction works."
-        }
+      "id": "iconography",
+      "path": "brand/iconography.md",
+      "title": "Iconography",
+      "status": "draft",
+      "summary": "Role, specs, sizes, states, and the core icon set.",
+      "dependsOn": [
+        "foundation",
+        "visual-language"
+      ],
+      "informs": [
+        "web",
+        "design-system"
       ]
     },
     {
-      "id": "05-visual-system",
-      "title": "Visual system",
-      "readme": "05-visual-system/README.md",
-      "documents": [
-        {
-          "path": "05-visual-system/logo.md",
-          "title": "Logo",
-          "order": 1,
-          "status": "stub",
-          "summary": "The logo marks, clear space, and usage."
-        },
-        {
-          "path": "05-visual-system/color.md",
-          "title": "Color",
-          "order": 2,
-          "status": "draft",
-          "summary": "Palette, proportion, contrast ratios, and usage."
-        },
-        {
-          "path": "05-visual-system/typography.md",
-          "title": "Typography",
-          "order": 3,
-          "status": "draft",
-          "summary": "Typefaces, scale, hierarchy, spacing, and accessibility."
-        },
-        {
-          "path": "05-visual-system/graphic-elements.md",
-          "title": "Graphic elements",
-          "order": 4,
-          "status": "stub",
-          "summary": "The supporting graphic elements."
-        },
-        {
-          "path": "05-visual-system/iconography.md",
-          "title": "Iconography",
-          "order": 5,
-          "status": "draft",
-          "summary": "Role, specs, sizes, states, and the core icon set."
-        },
-        {
-          "path": "05-visual-system/imagery.md",
-          "title": "Imagery",
-          "order": 6,
-          "status": "stub",
-          "summary": "The imagery and illustration approach."
-        },
-        {
-          "path": "05-visual-system/layout-and-composition.md",
-          "title": "Layout and composition",
-          "order": 7,
-          "status": "stub",
-          "summary": "Layout grids and composition rules."
-        },
-        {
-          "path": "05-visual-system/usage-rules.md",
-          "title": "Usage rules",
-          "order": 8,
-          "status": "stub",
-          "summary": "Cross-system usage rules and constraints."
-        }
+      "id": "typography",
+      "path": "brand/typography.md",
+      "title": "Typography",
+      "status": "draft",
+      "summary": "Typefaces, scale, hierarchy, spacing, and accessibility.",
+      "dependsOn": [
+        "foundation",
+        "visual-language"
+      ],
+      "informs": [
+        "web",
+        "design-system"
+      ]
+    },
+    {
+      "id": "logo",
+      "path": "brand/logo.md",
+      "title": "Logo",
+      "status": "draft",
+      "summary": "The marks, lockups, color specifications, clear space, and usage rules.",
+      "dependsOn": [
+        "foundation",
+        "color",
+        "typography"
+      ],
+      "informs": [
+        "web"
+      ]
+    },
+    {
+      "id": "voice",
+      "path": "brand/voice.md",
+      "title": "Voice",
+      "status": "draft",
+      "summary": "How Numena writes and speaks — principles, examples, and words to avoid.",
+      "dependsOn": [
+        "foundation"
+      ],
+      "informs": [
+        "web"
       ]
     }
+  ],
+  "consumers": [
+    "design-system",
+    "web"
   ]
 }

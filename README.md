@@ -1,26 +1,33 @@
 # Numena: Brand
 
-The brand identity, voice, and design system for Numena.
+The brand identity, voice, and visual system for Numena — written as a small set of Markdown documents, each with one responsibility.
+
+This repository is the **brand**. It is not the product's component library; that is the future `numena-design-system`, which will consume these documents rather than restate them. See [ARCHITECTURE.md](ARCHITECTURE.md).
 
 ## Start here
 
-- **[llms.txt](llms.txt)** — orientation for people and AI agents: how this repo is organized and where to look.
-- **[manifest.json](manifest.json)** — machine-readable index of every document (section, order, status, summary).
-- **[brand-guide.md](brand-guide.md)** — a one-page working summary of the whole brand.
+- **[brand/foundation.md](brand/foundation.md)** — the strategy everything else follows from. Read it first.
+- **[BRAND.md](BRAND.md)** — the whole brand on one page, with links to the source for every claim.
+- **[manifest.json](manifest.json)** — machine-readable index: every document, its status, and its dependencies.
+- **[AGENTS.md](AGENTS.md)** — how an AI agent should read and change this repository.
 
 ## Documents
 
-Five numbered sections. Each has a README with its reading order, and each document carries front matter (`title`, `section`, `order`, `status`, `summary`).
+The brand lives in [`brand/`](brand). Each document declares its `status` (`draft`, `in-review`, `approved`), a one-line `summary`, what it `dependsOn`, and what it `informs`.
 
-| Section | Covers |
+| Document | Covers |
 | --- | --- |
-| [01-strategy](01-strategy/README.md) | Context, audience, purpose, vision, positioning, promise, principles |
-| [02-meaning](02-meaning/README.md) | Central idea, name and origin, belief, story, semantic framework |
-| [03-character](03-character/README.md) | Personality, tensions, voice and tone, verbal identity |
-| [04-visual-semantics](04-visual-semantics/README.md) | Creative direction, visual concepts, rationale |
-| [05-visual-system](05-visual-system/README.md) | Logo, color, typography, graphic elements, iconography, imagery, layout, usage rules |
+| [Foundation](brand/foundation.md) | Purpose, brand idea, philosophy, positioning, audience, the boundary, messaging |
+| [Voice](brand/voice.md) | How Numena writes and speaks |
+| [Visual language](brand/visual-language.md) | Restraint, surfaces, accent roles, spacing, composition |
+| [Logo](brand/logo.md) | Marks, lockups, color specs, clear space, usage |
+| [Color](brand/color.md) | Palette, meaning, proportion, accessibility |
+| [Typography](brand/typography.md) | Typefaces, scale, hierarchy, spacing, accessibility |
+| [Iconography](brand/iconography.md) | Role, specs, sizes, states, core icon set |
 
-Documents with `status: stub` are placeholders awaiting content. To validate front matter and links and regenerate the index:
+Documents marked **draft** are in progress; open questions are flagged inline rather than silently decided. There are no placeholder documents.
+
+Validate front matter, the dependency graph, and links, and regenerate the index:
 
 ```sh
 node scripts/build-manifest.mjs
@@ -28,11 +35,11 @@ node scripts/build-manifest.mjs
 
 ## Assets (`assets/`)
 
-Logo, imagery, and illustrations — committed, owned by Numena (see `assets/README.md` for the per-folder licensing matrix). Fonts (`assets/fonts/`) are commercially licensed web fonts and stay out of this public repo.
+Logo, imagery, and illustrations, committed and owned by Numena. Fonts (`assets/fonts/`) are commercially licensed and stay out of this public repository; see [assets/README.md](assets/README.md) for the licensing matrix.
 
 ## Presentation (`web/`)
 
-A single-page presentation of the brand system, built only from the documents above:
+A single-page presentation of the brand, built only from the documents above:
 
 ```sh
 cd web
@@ -41,7 +48,4 @@ npm run dev      # local server; fonts resolve from ../assets/fonts
 npm run build    # tsc --noEmit + vite build
 ```
 
-Notes:
-
-- The build bundles the local Tiempos files into `web/dist/`, so `dist/` is gitignored and must never be published from a machine without the license.
-- `npm run dev` requires the licensed fonts in `assets/fonts/`; without them the pages fall back to Georgia.
+The build bundles the local Tiempos files into `web/dist/`, so `dist/` is gitignored and must never be published from a machine without the license.

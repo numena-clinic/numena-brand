@@ -1,23 +1,16 @@
 #!/usr/bin/env node
-// Validates front matter and internal links across the brand documents,
-// then regenerates manifest.json from them. No dependencies; run with:
+// Validates front matter, the dependency graph, and internal links across the
+// brand documents, then regenerates manifest.json from them. No dependencies.
 //   node scripts/build-manifest.mjs
 import { readFileSync, writeFileSync, readdirSync, existsSync } from "node:fs";
 import { join, dirname, resolve, basename } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
+const BRAND = join(ROOT, "brand");
 
-const SECTIONS = [
-  { id: "01-strategy", title: "Strategy" },
-  { id: "02-meaning", title: "Meaning" },
-  { id: "03-character", title: "Character" },
-  { id: "04-visual-semantics", title: "Visual semantics" },
-  { id: "05-visual-system", title: "Visual system" },
-];
-
-const REQUIRED = ["title", "section", "order", "status", "summary"];
-const STATUSES = ["stub", "draft", "in-review", "approved"];
+const REQUIRED = ["title", "status", "summary"];
+const STATUSES = ["draft", "in-review", "approved"];
 const GENERATED = new Set(["manifest.json"]);
 
 const errors = [];
@@ -28,44 +21,91 @@ function parseFrontmatter(src) {
   const data = {};
   for (const line of m[1].split(/\r?\n/)) {
     const kv = line.match(/^([A-Za-z0-9_-]+):\s*(.*)$/);
-    if (kv) data[kv[1]] = kv[2].trim().replace(/^["']|["']$/g, "");
+    if (!kv) continue;
+    const [, key, raw] = kv;
+    const value = raw.trim();
+    if (value.startsWith("[") && value.endsWith("]")) {
+      data[key] = value
+        .slice(1, -1)
+        .split(",")
+        .map((s) => s.trim().replace(/^["']|["']$/g, ""))
+        .filter(Boolean);
+    } else {
+      data[key] = value.replace(/^["']|["']$/g, "");
+    }
   }
   return data;
 }
 
-const sections = [];
-
-for (const { id, title } of SECTIONS) {
-  const dir = join(ROOT, id);
-  if (!existsSync(dir)) {
-    errors.push(`${id}: section directory is missing`);
-    continue;
-  }
-  const documents = [];
-  for (const file of readdirSync(dir).filter((f) => f.endsWith(".md") && f !== "README.md")) {
-    const path = `${id}/${file}`;
-    const fm = parseFrontmatter(readFileSync(join(ROOT, path), "utf8"));
-    if (!fm) {
-      errors.push(`${path}: missing front matter`);
-      continue;
-    }
-    for (const key of REQUIRED) if (!fm[key]) errors.push(`${path}: missing "${key}"`);
-    if (fm.section && fm.section !== id) errors.push(`${path}: section "${fm.section}" does not match "${id}"`);
-    if (fm.status && !STATUSES.includes(fm.status)) errors.push(`${path}: invalid status "${fm.status}"`);
-    const order = Number(fm.order);
-    if (!Number.isInteger(order)) errors.push(`${path}: order must be an integer`);
-    documents.push({ path, title: fm.title, order, status: fm.status, summary: fm.summary });
-  }
-  documents.sort((a, b) => a.order - b.order);
-  const seen = new Set();
-  for (const d of documents) {
-    if (seen.has(d.order)) errors.push(`${d.path}: duplicate order ${d.order}`);
-    seen.add(d.order);
-  }
-  sections.push({ id, title, readme: `${id}/README.md`, documents });
+if (!existsSync(BRAND)) {
+  console.error("brand/ directory is missing");
+  process.exit(1);
 }
 
-// Internal link check across the whole repo (skip generated, vendored, asset dirs).
+const documents = [];
+for (const file of readdirSync(BRAND).filter((f) => f.endsWith(".md"))) {
+  const id = basename(file, ".md");
+  const path = `brand/${file}`;
+  const fm = parseFrontmatter(readFileSync(join(BRAND, file), "utf8"));
+  if (!fm) {
+    errors.push(`${path}: missing front matter`);
+    continue;
+  }
+  for (const key of REQUIRED) if (!fm[key]) errors.push(`${path}: missing "${key}"`);
+  if (fm.status && !STATUSES.includes(fm.status)) errors.push(`${path}: invalid status "${fm.status}"`);
+  documents.push({
+    id,
+    path,
+    title: fm.title,
+    status: fm.status,
+    summary: fm.summary,
+    dependsOn: Array.isArray(fm.dependsOn) ? fm.dependsOn : [],
+    informs: Array.isArray(fm.informs) ? fm.informs : [],
+  });
+}
+
+const ids = new Set(documents.map((d) => d.id));
+const consumers = new Set();
+
+for (const d of documents) {
+  for (const dep of d.dependsOn) {
+    if (!ids.has(dep)) errors.push(`${d.path}: dependsOn "${dep}" is not a brand document`);
+    if (dep === d.id) errors.push(`${d.path}: depends on itself`);
+  }
+  for (const target of d.informs) {
+    if (!ids.has(target)) consumers.add(target);
+  }
+}
+
+// Cycle detection over dependsOn.
+const state = new Map();
+function visit(id, trail) {
+  if (state.get(id) === "done") return;
+  if (state.get(id) === "visiting") {
+    errors.push(`dependency cycle: ${[...trail, id].join(" -> ")}`);
+    return;
+  }
+  state.set(id, "visiting");
+  const doc = documents.find((d) => d.id === id);
+  for (const dep of doc.dependsOn) if (ids.has(dep)) visit(dep, [...trail, id]);
+  state.set(id, "done");
+}
+for (const d of documents) visit(d.id, []);
+
+// Reading order: dependencies before dependents, then alphabetical.
+const order = [];
+const placed = new Set();
+function place(id) {
+  if (placed.has(id)) return;
+  placed.add(id);
+  const doc = documents.find((d) => d.id === id);
+  for (const dep of doc.dependsOn) if (ids.has(dep)) place(dep);
+  order.push(id);
+}
+for (const id of [...ids].sort()) place(id);
+const sorted = order.map((id) => documents.find((d) => d.id === id));
+
+// Internal link check across the repo (skip generated, vendored, asset dirs).
 function markdownFiles(dir, out = []) {
   for (const entry of readdirSync(dir, { withFileTypes: true })) {
     if (entry.name.startsWith(".")) continue;
@@ -91,18 +131,26 @@ for (const full of markdownFiles(ROOT)) {
 const manifest = {
   name: "Numena: Brand",
   description:
-    "The brand identity, voice, and design system for Numena: a workspace for psychologists to connect observations, hypotheses, evidence, and decisions, with every conclusion traceable.",
+    "The brand identity, voice, and visual system for Numena — written as a small set of Markdown documents with an explicit dependency graph.",
   generator: "scripts/build-manifest.mjs",
   conventions: {
-    layout: "Five numbered top-level sections, read in order.",
-    frontMatter: REQUIRED,
+    layout: "Flat brand/ directory; each document is one file.",
+    frontMatter: ["title", "status", "summary", "dependsOn", "informs"],
     status: STATUSES,
-    readmes: "Each section README lists its documents in reading order.",
+    readingOrder: "Documents sorted so every dependency is read before the document that needs it.",
+    authority: "Each decision has one authoritative document; summaries never override their sources.",
   },
-  sections,
+  documents: sorted.map((d) => ({
+    id: d.id,
+    path: d.path,
+    title: d.title,
+    status: d.status,
+    summary: d.summary,
+    dependsOn: d.dependsOn,
+    informs: d.informs,
+  })),
+  consumers: [...consumers].sort(),
 };
-
-const total = sections.reduce((n, s) => n + s.documents.length, 0);
 
 if (errors.length) {
   console.error(`\n${errors.length} error(s) found:\n`);
@@ -111,5 +159,7 @@ if (errors.length) {
 }
 
 writeFileSync(join(ROOT, "manifest.json"), JSON.stringify(manifest, null, 2) + "\n");
-console.log(`manifest.json written: ${sections.length} sections, ${total} documents.`);
-console.log("Front matter and internal links valid.");
+console.log(`manifest.json written: ${documents.length} documents.`);
+console.log(`Reading order: ${order.join(" -> ")}`);
+if (consumers.size) console.log(`External consumers: ${[...consumers].join(", ")}`);
+console.log("Front matter, dependency graph, and internal links valid.");

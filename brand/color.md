@@ -1,9 +1,9 @@
 ---
 title: Color
-section: 05-visual-system
-order: 2
 status: draft
-summary: Palette, proportion, contrast ratios, and usage.
+summary: The palette, its intended meaning, proportion, and accessibility rules.
+dependsOn: [foundation, visual-language]
+informs: [logo, web, design-system]
 ---
 
 # Numena: Color System
@@ -38,7 +38,7 @@ The jobs for cyan and lilac are proposals. They take the intended qualities and 
 
 **Why purple leads.** Discernment is the first brand quality, and deep purple is the darkest, most saturated color in the set. It carries visual weight, so it naturally becomes the identity and the primary action. The paler and brighter colors then read as support.
 
-**What color never does.** It never delivers a verdict. No color in this set means "good", "bad", "at risk", or "confirmed". That fits the boundary in the Foundation doc: Numena does not assess, diagnose, or decide, so its color should not either.
+**What color never does.** It never delivers a verdict. No color in this set means "good", "bad", "at risk", or "confirmed". That fits the boundary in [Foundation](foundation.md): Numena does not assess, diagnose, or decide, so its color should not either.
 
 ### Hierarchy and proportion
 

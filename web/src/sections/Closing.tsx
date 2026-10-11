@@ -23,7 +23,7 @@ export function Closing() {
           <p className="label">Where this lives</p>
           <p style={{ marginTop: "var(--space-sm)", color: "var(--color-text-soft)" }}>
             Every rule on this page comes from the Numena brand system, condensed into{" "}
-            <code>brand-guide.md</code>. Anything not documented
+            <code>BRAND.md</code> and the documents in <code>brand/</code>. Anything not documented
             there — clear space, minimum logo size, semantic colors, radius — is shown neutrally
             here and flagged rather than invented.
           </p>

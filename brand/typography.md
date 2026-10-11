@@ -1,9 +1,9 @@
 ---
 title: Typography
-section: 05-visual-system
-order: 3
 status: draft
 summary: Typefaces, scale, hierarchy, spacing, and accessibility.
+dependsOn: [foundation, visual-language]
+informs: [web, design-system]
 ---
 
 # Numena: Typography

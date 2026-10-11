@@ -1,4 +1,4 @@
-/* Presentation content — copy is drawn from the Numena brand strategy and 05-visual-system. */
+/* Presentation content — copy is drawn from the documents in brand/. */
 
 export const nav = [
   { id: "brand-idea", label: "Idea" },
