@@ -1,99 +1,47 @@
 # Brand Strategy
 
-This directory contains the strategic foundation of Numena's brand. It defines the market position Numena seeks to occupy, the meaning it intends to establish, and the principles that guide how it communicates.
+This directory defines what Numena stands for, how it is positioned, and how it communicates.
 
-The documents provide a shared reference for decisions across brand identity, marketing, communication, and product experience. They are intended to guide practical decisions rather than serve as standalone descriptions of the brand.
+The documents provide a shared reference for brand decisions and guide the development of Numena's messaging, verbal identity, and visual identity.
 
 ## Documents
 
-### 01. Positioning
+### [Positioning](positioning.md)
 
-**Where does Numena fit, and why should it matter?**
+**Where does Numena belong in the market?**
 
-Defines Numena's intended position in the market, the audience it serves, the problem it addresses, and the reasons it should be considered over alternatives.
+Defines Numena's intended position, audience, category, value proposition, differentiation, and competitive context.
 
-Includes:
-- Category and competitive context
-- Target audience and relevant needs
-- Problem and underlying tension
-- Differentiation
-- Value proposition
-- Positioning statement
-
-### 02. Brand Foundation
+### [Brand Foundation](brand-foundation.md)
 
 **What does Numena stand for?**
 
-Defines the central idea, beliefs, and principles that shape Numena's identity and guide its behavior.
+Defines the central idea, brand beliefs, name and meaning, brand promise, guiding principles, personality, and behavioral principles.
 
-Includes:
-- Central idea
-- Brand beliefs
-- Name and meaning
-- Brand promise
-- Guiding principles
-- Brand personality
-- Behavioral principles
-
-### 03. Messaging and Verbal Identity
+### [Messaging](messaging.md)
 
 **What should Numena communicate, and how should it sound?**
 
-Translates the brand strategy into clear, consistent communication. Messaging establishes what Numena says; verbal identity establishes how it says it.
+Translates the positioning and brand foundation into practical communication guidelines, including the product description, value proposition, core and supporting messages, elevator pitch, voice, tone, writing principles, and preferred vocabulary.
 
-Includes:
+## How the Documents Work Together
 
-**Messaging**
-- One-sentence description
-- Value proposition expression
-- Core message
-- Supporting messages
-- Elevator pitch
+- **Positioning** establishes the strategic context.
+- **Brand Foundation** defines the meaning and character that guide Numena.
+- **Messaging** translates both into consistent, practical communication.
 
-**Verbal identity**
-- Voice
-- Tone
-- Writing principles
-- Preferred words
-- Words to avoid
+These documents have distinct responsibilities but inform one another. They are not a strictly linear process; new research, product development, and feedback may lead to revisions.
 
-## How the Documents Relate
+## Using This Strategy
 
-The documents address three connected layers of brand strategy:
+Use these documents when making decisions about the brand, writing product or marketing copy, developing the website, or evaluating whether a communication reflects Numena's intended identity.
 
-1. **Positioning** establishes Numena's intended place in the market.
-2. **Brand Foundation** defines the meaning, beliefs, and character that inform the brand.
-3. **Messaging and Verbal Identity** translate those strategic decisions into communication.
+Keep each decision in its appropriate document. Avoid duplicating definitions across files; reference the relevant source instead.
 
-This is a recommended reading order, not a rigid sequence. Positioning and brand foundation inform each other and may evolve together. Messaging and verbal identity should reflect the resulting strategy rather than operate independently of it.
+Distinguish established decisions from assumptions that still require validation. A documented positioning statement or intended product benefit should not be treated as evidence of market demand or demonstrated product performance.
 
 ## Scope
 
-Brand strategy defines what Numena stands for, how it seeks to be understood, and what should guide its expression.
+This directory covers brand strategy and communication. Visual identity guidelines are maintained separately in [`visual-identity/`](../visual-identity/).
 
-It is distinct from, but informs, other parts of the brand and product ecosystem:
-
-- **Visual identity** translates the strategy into visual elements and usage rules.
-- **Product experience** expresses the brand through interactions, functionality, and behavior.
-- **Marketing and communication materials** apply the strategy to specific audiences, channels, and contexts.
-
-These areas should remain consistent with the strategy without duplicating its foundational decisions.
-
-## Strategic Integrity
-
-The documents should distinguish between established decisions, assumptions, and hypotheses that require validation.
-
-- **Evidence:** Research or observations that support a claim.
-- **Hypothesis:** An interpretation or proposition that remains to be tested.
-- **Decision:** An explicit strategic choice.
-- **Expression:** The language or design used to communicate a decision.
-
-Not every brand decision requires formal research, but claims about audience needs, market differentiation, and customer understanding should not be presented as established facts without adequate support.
-
-## Maintaining the Strategy
-
-Treat these documents as connected working references rather than independent sources of truth.
-
-When a foundational decision changes, review the downstream implications for messaging, verbal identity, visual identity, and product experience. Keep each decision in its appropriate document and reference it elsewhere when needed instead of maintaining competing versions.
-
-The goal is a coherent, usable brand strategy that supports clear decisions as Numena develops.
+Product requirements, implementation details, and clinical or technical specifications belong in their respective documentation.
