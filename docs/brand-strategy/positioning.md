@@ -1,158 +1,270 @@
-# 1. Positioning
+# 01. Positioning
 
-**What place do we want Numena to occupy?**
+## Purpose
 
-Positioning defines the place Numena seeks to occupy in the minds of its audience and within the landscape of mental health practice.
+This document defines the position Numena seeks to occupy in the market and in the minds of its intended audience.
 
-It establishes what Numena is, who it serves, what problem it addresses, how it differs from alternatives, and why that difference matters.
+It establishes the category Numena belongs to, whom it serves, the problem it addresses, the alternatives against which it competes, and the basis for its intended differentiation.
 
-The goal is not simply to describe the product. It is to define a meaningful and defensible place for the brand.
+Positioning is a strategic choice, not simply a description of the product. It defines what Numena wants to be known for and why that position should matter to the people it serves.
 
-## 1.1 Category
+The positioning must remain credible as the product evolves. It should guide product strategy and brand expression without prescribing specific features, technologies, or visual decisions.
 
-**What category does Numena belong to?**
+## 1. Category
+
+### What category does Numena belong to?
 
 Numena is a professional practice platform for psychologists.
 
-It sits at the intersection of clinical information, professional reflection, and practice support. Rather than focusing exclusively on administration or recordkeeping, Numena is intended to support the work of organizing and examining complex clinical information over time.
+It is intended to support the work involved in understanding and working with complex clinical information. Its conceptual focus is the relationship between information, interpretation, reflection, and professional judgment.
 
-The category should be broad enough to accommodate the platform's evolution without defining the brand around a particular feature or technology.
+This places Numena within the broader landscape of professional tools for psychological practice, while seeking a distinct position beyond practice administration and clinical recordkeeping alone.
+
+The category should be understandable to psychologists without requiring them to learn a new conceptual framework before they understand what Numena is.
 
 **Category principle**
 
 Numena supports the work of psychological practice without replacing the professional's judgment.
 
-## 1.2 Audience
+The category is a strategic starting point, not a claim that the market already recognizes Numena as a distinct category.
 
-**Who is Numena for?**
+## 2. Audience
 
-Numena is designed primarily for psychologists who work with complex, evolving clinical information and want better ways to organize, examine, and revisit their thinking.
+### Who is Numena for?
 
-Their work involves more than recording what happens in a session. It requires working with observations, context, recurring patterns, possible explanations, contradictory evidence, unanswered questions, and decisions that may change as new information emerges.
+Numena is designed primarily for psychologists who work with complex, evolving clinical information and need ways to organize, examine, and revisit their thinking over time.
 
-These professionals need tools that respect the complexity of their work and the responsibility that comes with interpreting human experience.
+Their work involves more than recording what happens in a session. It can involve interpreting observations in context, considering possible patterns, developing hypotheses, examining supporting and contradictory evidence, and revising an understanding as new information emerges.
 
-They value:
+The intended audience values the ability to think carefully about human experience without prematurely reducing it to a single explanation.
 
-- Professional judgment and autonomy
-- Context and nuance
-- Continuity of information over time
-- Reflective and deliberate practice
-- Organized, retrievable information
-- Privacy and confidentiality
-- Tools that support their expertise rather than prescribe conclusions
+### Relevant needs
 
-Numena should address psychologists as thinking professionals, not simply as users who need to complete administrative tasks.
+The positioning is built around the following hypothesized needs:
 
-This audience definition is a strategic starting point. Its assumptions about practitioners' needs, behaviors, and existing workflows should be validated through research.
+- **Context:** Understand observations in relation to the broader clinical picture.
+- **Continuity:** Revisit information and earlier interpretations over time.
+- **Reflection:** Examine reasoning rather than simply document outcomes.
+- **Organization:** Make complex information easier to navigate and retrieve.
+- **Uncertainty:** Keep competing explanations and unanswered questions visible when appropriate.
+- **Autonomy:** Retain responsibility for professional interpretations and decisions.
+- **Confidentiality:** Work with sensitive information in ways that respect professional and legal obligations.
 
-## 1.3 Problem / Tension
+These needs describe the audience Numena intends to serve. Their relative importance, prevalence, and relationship to existing workflows require validation through user research.
 
-**What problem does Numena address?**
+### Audience principle
 
-Psychological practice involves working with information that is complex, incomplete, and constantly evolving.
+Address psychologists as professionals engaged in complex interpretive work, not merely as practitioners who need to complete administrative tasks.
 
-Observations, session notes, patterns, hypotheses, evidence, and decisions accumulate over time. Their significance often depends on relationships and context rather than on individual records.
+## 3. Problem and Underlying Tension
 
-When this information is scattered across notes, documents, memory, and separate tools, it can become difficult to see connections, revisit earlier interpretations, and maintain a coherent view of the work.
+### What problem does Numena address?
 
-The central tension is:
+Psychological practice involves working with information that is incomplete, contextual, and continually evolving.
 
-**Psychological practice requires nuanced, evolving interpretation, but the tools used to support it often organize information without adequately supporting the thinking around it.**
+Observations, session notes, hypotheses, interpretations, and decisions accumulate over time. Their significance often depends on how they relate to one another, what evidence supports them, and what remains unknown.
 
-Numena's opportunity is to address this gap between storing information and working meaningfully with it.
+The challenge is not only keeping information organized. It is being able to work with that information while preserving its context, examining possible meanings, and revisiting earlier conclusions as understanding develops.
 
-The goal is not to automate understanding or produce definitive interpretations of a person. It is to give psychologists a structured environment in which they can organize information, examine relationships, consider alternatives, and revisit their reasoning.
+Numena's strategic premise is that existing ways of managing clinical information may not adequately support every aspect of this work.
 
-The specific extent of this problem, and how existing tools address it, remain questions for user and competitive research.
+### The central tension
 
-## 1.4 Differentiation
+**Psychologists need to work with complex, evolving interpretations, while the tools available to them may prioritize storing, documenting, and managing information.**
 
-**What makes Numena meaningfully different?**
+This tension defines the opportunity Numena seeks to explore: the space between managing clinical information and actively working with its meaning.
 
-Numena's intended differentiation is its focus on the thinking behind psychological practice.
+The positioning does not assume that all existing tools fail to support reflection or clinical reasoning. The extent of this gap, the situations in which it matters, and the alternatives psychologists currently use must be established through research.
 
-Where conventional practice software typically prioritizes administration, documentation, and record retrieval, Numena aims to support the relationships between information, interpretation, and professional decisions.
+### Strategic implication
 
-Its approach is built around the following principles:
+Numena should be positioned around the quality and continuity of professional thinking, rather than around the volume of information it stores or the administrative tasks it automates.
 
-- **Context over isolated information.** Preserve the relationships that give observations meaning.
-- **Exploration over premature conclusions.** Make room for competing interpretations, contradictory evidence, and unanswered questions.
-- **Reflection over prescription.** Help professionals examine their reasoning without dictating what they should conclude.
-- **Professional judgment over algorithmic authority.** Keep the psychologist responsible for interpreting information and making professional decisions.
-- **Continuity over fragmentation.** Make it easier to revisit earlier observations and understand how interpretations evolve.
-- **Clarity without oversimplification.** Reduce unnecessary cognitive and organizational burden without erasing the complexity of human experience.
+The goal is not to eliminate uncertainty or automate understanding. It is to support a more deliberate relationship with complex information while leaving professional interpretation and decision-making with the psychologist.
 
-These principles should shape both the product's capabilities and the brand's communication.
+## 4. Differentiation
 
-Numena should not claim these qualities as proven competitive advantages until its product and competitors have been evaluated against them.
+### What should make Numena distinct?
 
-**Differentiation principle**
+Numena's intended differentiation is its focus on the thinking involved in psychological practice.
 
-Numena is designed around how psychologists work with clinical information and develop their understanding over time, rather than treating that work as a collection of disconnected records and administrative tasks.
+Rather than defining its identity primarily through administrative efficiency, documentation, or automation, Numena seeks to be understood through how it supports psychologists in working with complex information and developing their understanding over time.
 
-## 1.5 Positioning Statement
+This intended position rests on six strategic distinctions.
 
-**How should Numena be understood in the market?**
+**Context over isolated information**
 
-For psychologists working with complex, evolving clinical information, Numena is a professional practice platform designed to help them organize observations, examine relationships, and revisit their reasoning over time.
+Treat information as part of a broader picture rather than as disconnected records.
 
-Unlike tools focused primarily on administration, recordkeeping, or isolated notes, Numena is built around the thinking involved in psychological practice.
+**Exploration over premature conclusions**
 
-Its intended value is to make complex information easier to work with while preserving the psychologist's professional judgment.
+Allow room for alternative explanations, contradictory evidence, and unanswered questions.
 
-**Short form**
+**Reflection over prescription**
 
-Numena is a professional practice platform designed around the thinking behind psychological practice.
+Support the examination of professional reasoning without dictating what the psychologist should conclude.
 
-**Positioning principle**
+**Professional judgment over algorithmic authority**
 
-Numena gives professional judgment a place to work.
+Keep the psychologist responsible for interpreting information and making professional decisions.
 
-This is a candidate strategic expression, not necessarily the final public-facing tagline. Its clarity, relevance, and distinctiveness should be tested with the intended audience.
+**Continuity over fragmentation**
 
-## 1.6 Competitive Frame
+Support the ability to revisit earlier observations and understand how interpretations develop over time.
 
-**What alternatives does Numena compete against?**
+**Clarity without oversimplification**
 
-Numena's competitive landscape includes not only products with similar features, but also the different ways psychologists currently organize information and support their work.
+Make complex information easier to work with without implying that human experience can always be reduced to simple answers.
+
+These distinctions express the position Numena intends to establish. They are strategic criteria for evaluating the product and brand, not yet proven competitive advantages.
+
+### Differentiation principle
+
+Numena seeks to be distinguished by how it supports psychologists in working with clinical information, not merely by how it stores information or automates tasks.
+
+To establish this differentiation credibly, Numena must demonstrate that its product experience meaningfully reflects these principles and that the distinction matters to its intended audience.
+
+## 5. Value Proposition
+
+### Why should psychologists consider Numena?
+
+Numena aims to give psychologists a more structured way to work with complex clinical information and examine their thinking over time.
+
+Its intended value is to make information and relationships easier to work with while preserving the context, uncertainty, and professional judgment that psychological practice requires.
+
+**Value proposition**
+
+A more structured way for psychologists to work through clinical complexity, without giving up the nuance or judgment their work requires.
+
+This is the strategic value Numena intends to deliver. Specific product capabilities, usability, and the extent of the benefit must be established through implementation and evaluation.
+
+## 6. Positioning Statement
+
+### How should Numena be understood in the market?
+
+For psychologists working with complex, evolving clinical information, Numena is a professional practice platform that aims to make the thinking behind psychological practice easier to organize, examine, and revisit.
+
+Unlike tools used primarily for administration, recordkeeping, or general-purpose note-taking, Numena seeks to place greater emphasis on the relationships between information, interpretation, and professional judgment.
+
+Its intended value is to make complex information easier to work with without presenting automated outputs or structured representations as substitutes for professional understanding.
+
+### Short form
+
+Numena is a professional practice platform for psychologists working with complex clinical information.
+
+### Core positioning idea
+
+**Numena gives professional judgment a place to work.**
+
+This is a candidate strategic expression, not a finalized public-facing tagline. Its clarity, relevance, and distinctiveness should be evaluated with the intended audience.
+
+## 7. Competitive Frame
+
+### What alternatives does Numena compete against?
+
+Numena competes not only with products that offer similar features, but also with the existing tools, workflows, and practices psychologists use to organize information and support their work.
+
+The following categories establish an initial competitive frame. They are starting points for investigation, not verified descriptions of every product in each category.
 
 ### Practice management software
 
-Tools focused on scheduling, billing, administrative workflows, forms, and practice operations.
+Tools focused on scheduling, billing, appointments, administrative workflows, and practice operations.
 
-**Numena's distinction:** Its intended focus extends beyond managing the practice to supporting how psychologists organize and examine clinical information.
+**Intended distinction:** Numena seeks to address the work of understanding clinical information, beyond managing the operations of a practice.
 
-### Electronic health records and clinical documentation tools
+### Clinical records and documentation tools
 
-Tools designed to store, structure, retrieve, and maintain clinical records.
+Tools designed to create, store, structure, retrieve, and maintain clinical records.
 
-**Numena's distinction:** Numena aims to make the relationships between observations, interpretations, and decisions more visible, rather than treating information primarily as documentation.
+**Intended distinction:** Numena seeks to emphasize how information relates to interpretation and professional reasoning, rather than defining its value primarily through documentation.
 
 ### General-purpose notes and knowledge management tools
 
-Documents, spreadsheets, digital notebooks, and personal knowledge systems that psychologists adapt to their own workflows.
+Documents, spreadsheets, digital notebooks, and other tools adapted by psychologists to manage their own information and workflows.
 
-**Numena's distinction:** Numena aims to provide a structure specifically suited to the evolving information and reasoning involved in psychological practice, without requiring professionals to build that structure themselves.
+**Intended distinction:** Numena aims to provide a structure designed around the evolving information and reasoning involved in psychological practice, rather than requiring practitioners to construct that structure themselves.
 
 ### AI-assisted clinical tools
 
-Tools that offer transcription, summaries, documentation assistance, recommendations, or other forms of automated support.
+Tools that provide transcription, summaries, documentation assistance, suggestions, or other forms of automated support.
 
-**Numena's distinction:** Numena's intended approach is to support the psychologist's own reasoning rather than position automated outputs as authoritative clinical conclusions.
+**Intended distinction:** Numena's strategic direction emphasizes supporting psychologists' own reasoning and judgment rather than treating automated outputs as authoritative clinical conclusions.
 
-These distinctions describe Numena's intended competitive position. They should be validated against actual products, including their current capabilities, target audiences, and approaches to clinical reasoning.
+### Existing professional workflows
+
+Manual notes, personal systems, established routines, and combinations of tools that practitioners already use.
+
+**Intended distinction:** Numena must offer enough practical value to justify changing or supplementing familiar workflows.
+
+### Competitive validation
+
+For each category, research should establish:
+
+- Which products and alternatives psychologists actually use.
+- What those products currently do, including support for reflection, clinical reasoning, and longitudinal context.
+- Which needs remain unmet, for whom, and in what situations.
+- How psychologists evaluate current solutions and what would motivate them to change.
+- Whether Numena's intended differentiation is noticeable, relevant, credible, and difficult to replicate.
+
+Numena should not claim superiority over a category based on assumptions about its competitors.
+
+## 8. Strategic Boundaries
+
+The positioning establishes what Numena seeks to represent. It does not determine every product decision or promise a capability that has not been implemented and evaluated.
+
+The following boundaries preserve the intended position.
+
+**The brand is not the product feature set.** Features may change; the strategic position should remain coherent as long as the underlying audience needs and business direction remain valid.
+
+**AI is not the defining reason for Numena to exist.** Technology may support the intended value, but should not displace the focus on professional thinking and judgment.
+
+**Structure is not certainty.** Organizing information or making relationships visible does not automatically establish that an interpretation is correct.
+
+**Support is not substitution.** Numena should not present itself as a replacement for professional judgment, clinical responsibility, or appropriate professional standards.
+
+**Clarity is not simplification at any cost.** Communication and product design should make complexity more manageable without concealing relevant ambiguity.
+
+These boundaries guide the evaluation of future product capabilities and brand claims.
+
+## 9. Evidence and Validation
+
+Positioning combines evidence, interpretation, and strategic choice. These should remain distinguishable.
+
+### Current strategic hypotheses
+
+The following assumptions require validation:
+
+- Psychologists experience meaningful difficulties working with complex clinical information across time.
+- Existing tools or workflows leave important needs insufficiently addressed.
+- Supporting reflection and the examination of reasoning is a meaningful distinction for the intended audience.
+- Psychologists value this distinction enough to consider adopting a new or complementary tool.
+- Numena can deliver this value in a practical, trustworthy, and professionally appropriate way.
+
+### Evidence needed
+
+Validation should combine audience research, competitive analysis, and product evaluation.
+
+- **Audience research:** Investigate real workflows, unmet needs, workarounds, and the language psychologists use to describe their challenges.
+- **Competitive research:** Compare actual capabilities, positioning, audience, and limitations of relevant alternatives.
+- **Concept testing:** Evaluate whether the proposed positioning is understood, relevant, credible, and distinctive.
+- **Product evaluation:** Test whether Numena's actual experience delivers the value its positioning promises.
+
+Findings should inform revisions to the positioning rather than be used only to confirm the original assumptions.
 
 ## Positioning Summary
 
-Numena seeks to occupy a space between clinical information management and professional reflection.
+Numena seeks to occupy a position within professional tools for psychologists, with a distinctive emphasis on working with complex clinical information and the thinking involved in psychological practice.
 
-It is not defined solely by what it stores, the administrative tasks it automates, or the technology it uses. Its defining ambition is to help psychologists work with complex clinical information while retaining ownership of their interpretations and decisions.
+Its intended audience is psychologists who need to organize information, examine relationships, and revisit their understanding over time.
+
+Its intended differentiation is support for context, reflection, continuity, and professional judgment rather than a primary emphasis on administration, documentation, or automation.
+
+Its strategic ambition is to make complex clinical thinking easier to work with while respecting the uncertainty and responsibility inherent in psychological practice.
 
 **Core positioning idea**
 
 Numena gives professional judgment a place to work.
 
-**Strategic implication**
+**Strategic direction**
 
-The brand should communicate clarity, depth, and respect for human complexity. The product should express those qualities through its structure, interactions, and treatment of information. Technology, including AI, should serve this purpose rather than become the reason the brand exists.
+Make complex clinical information easier to work with, while preserving the nuance, uncertainty, and professional judgment required to understand it.
