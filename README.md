@@ -37,15 +37,15 @@ node scripts/build-manifest.mjs
 
 Logo, imagery, and illustrations, committed and owned by Numena. Fonts (`assets/fonts/`) are commercially licensed and stay out of this public repository; see [assets/README.md](assets/README.md) for the licensing matrix.
 
-## Presentation (`web/`)
+## Site (`web/`)
 
-A single-page presentation of the brand, built only from the documents above:
+A static Astro + Tailwind + MDX site that renders the documents above — it reads `manifest.json` for navigation and the `brand/*.md` sources for content, so nothing is authored twice:
 
 ```sh
 cd web
 npm install
 npm run dev      # local server; fonts resolve from ../assets/fonts
-npm run build    # tsc --noEmit + vite build
+npm run build    # astro build → static output in web/dist/
 ```
 
-The build bundles the local Tiempos files into `web/dist/`, so `dist/` is gitignored and must never be published from a machine without the license.
+The build emits the local Tiempos files into `web/dist/`, so `dist/` is gitignored and must never be published from a machine without the license.

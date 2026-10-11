@@ -1,0 +1,6 @@
+---
+import { getBrandSummaryHtml } from "../lib/brand";
+const html = getBrandSummaryHtml();
+---
+
+<article class="prose" set:html={html} />

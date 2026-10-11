@@ -1,7 +1,7 @@
-/* Local fonts — Tiempos family (WOFF2) lives in ../../assets/fonts and is
-   referenced in place (never duplicated). Tiempos is a commercially licensed
-   Klim face and is intentionally excluded from the public repo. Albert Sans
-   loads from Google Fonts (SIL OFL 1.1). */
+/* Local fonts — the Tiempos family (WOFF2) lives in the repository-level
+   assets/fonts and is referenced in place (never duplicated). Tiempos is a
+   commercially licensed Klim face and is intentionally excluded from the
+   public repo. Albert Sans loads from Google Fonts (SIL OFL 1.1). */
 
 @font-face {
   font-family: "Tiempos Text";

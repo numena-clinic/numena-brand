@@ -23,6 +23,7 @@ The **brand** for Numena: strategy, voice, and the visual system. A set of Markd
 5. **`manifest.json` is generated.** Never edit it by hand.
 6. **Never commit fonts.** `assets/fonts/` is licensed (Klim Tiempos) and gitignored. Confirm any new asset's license permits public redistribution and record it in [assets/README.md](assets/README.md).
 7. **Stay in scope.** Brand only. Do not add design-system code, tokens pipelines, or product components here.
+8. **The web stack is Astro + Tailwind + MDX.** `web/` renders the documents; it is never a second source. Do not add React, Vue, Svelte, Headless UI, or another component library — prefer native HTML and small Astro components, and reach for a library only when one specific interaction genuinely requires it.
 
 ## Front matter contract
 

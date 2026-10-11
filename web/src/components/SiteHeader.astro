@@ -1,0 +1,44 @@
+---
+import { getNav } from "../lib/brand";
+import logoText from "../../../assets/logo/logo-text.svg";
+
+const nav = getNav();
+const current = Astro.url.pathname.replace(/\/$/, "") || "/";
+---
+
+<header
+  class="sticky top-0 z-50 border-b border-pale-lavender/70 bg-white/90 backdrop-blur"
+>
+  <div
+    class="mx-auto flex max-w-6xl flex-col gap-3 px-5 py-3 sm:flex-row sm:items-center sm:justify-between sm:gap-6 sm:px-8"
+  >
+    <a href="/" class="shrink-0" aria-label="Numena brand home">
+      <img src={logoText.src} alt="Numena" height="22" class="h-[22px] w-auto" />
+    </a>
+    <nav aria-label="Brand documents" class="-mx-1 min-w-0">
+      <ul
+        class="flex items-center gap-1 overflow-x-auto text-sm font-medium text-charcoal/70"
+      >
+        {
+          nav.map((item) => {
+            const isCurrent = current === item.href;
+            return (
+              <li class="shrink-0">
+                <a
+                  href={item.href}
+                  aria-current={isCurrent ? "page" : undefined}
+                  class:list={[
+                    "block whitespace-nowrap rounded-full px-3 py-1.5 transition-colors hover:bg-pale-lavender hover:text-deep-purple",
+                    isCurrent && "bg-pale-lavender text-deep-purple",
+                  ]}
+                >
+                  {item.title}
+                </a>
+              </li>
+            );
+          })
+        }
+      </ul>
+    </nav>
+  </div>
+</header>

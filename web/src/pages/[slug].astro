@@ -1,0 +1,43 @@
+---
+import { getDocs } from "../lib/brand";
+import DocLayout from "../layouts/DocLayout.astro";
+
+export function getStaticPaths() {
+  return getDocs().map((doc) => ({ params: { slug: doc.id }, props: { doc } }));
+}
+
+const { doc } = Astro.props;
+---
+
+<DocLayout title={doc.title} description={doc.summary}>
+  <article class="mx-auto max-w-3xl px-5 py-12 sm:px-8">
+    <header class="mb-8 border-b border-pale-lavender pb-6">
+      <p class="text-xs font-medium uppercase tracking-widest text-bright-lilac">
+        {doc.status}
+      </p>
+      <h1 class="mt-2 font-serif text-3xl font-bold tracking-tight text-charcoal sm:text-4xl">
+        {doc.title}
+      </h1>
+      <p class="mt-3 text-lg text-charcoal/70">{doc.summary}</p>
+      {
+        doc.dependsOn.length > 0 && (
+          <p class="mt-4 text-sm text-charcoal/60">
+            Follows{" "}
+            {doc.dependsOn.map((id, i) => (
+              <>
+                {i > 0 && ", "}
+                <a
+                  href={`/${id}`}
+                  class="text-deep-purple underline underline-offset-4"
+                >
+                  {id}
+                </a>
+              </>
+            ))}
+          </p>
+        )
+      }
+    </header>
+    <div class="prose" set:html={doc.html} />
+  </article>
+</DocLayout>

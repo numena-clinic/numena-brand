@@ -22,7 +22,12 @@ numena-brand/
 ├── assets/              Logo, imagery, illustrations, (gitignored) fonts.
 ├── scripts/
 │   └── build-manifest.mjs   Validates front matter, dependencies, links.
-└── web/                 A single-page presentation built from brand/.
+└── web/                 The brand site: renders brand/ with Astro + Tailwind + MDX.
+    ├── astro.config.mjs
+    └── src/
+        ├── layouts/     DocLayout, header, footer (native HTML).
+        ├── lib/brand.ts Reads manifest.json + brand/*.md; renders Markdown.
+        └── pages/       Home (MDX) and one page per document.
 ```
 
 The documents are **flat** on purpose. A numbered folder tree invites empty placeholder files and a reading order that is guessed rather than declared; a flat folder plus front matter makes each document declare its own place.
@@ -51,6 +56,15 @@ foundation ──┬── voice
 Read direction is dependency-first: `foundation` → `visual-language` → the specs. `logo` sits last among the specs because it draws on color and typography. `scripts/build-manifest.mjs` computes the reading order from the graph, rejects cycles, and rejects a `dependsOn` that names a missing document.
 
 `informs` may also name external consumers (`web`, `design-system`) that are not documents in this repo.
+
+## The web presentation
+
+`web/` is a plain, static site that renders the brand documents. Nothing on it is authored twice: it reads `manifest.json` for navigation and metadata, and the `brand/*.md` files (plus `BRAND.md`) for content, then renders the Markdown to HTML.
+
+- **Stack:** Astro, Tailwind CSS, and MDX. Astro is the only build tool; Tailwind's theme is fed from the brand palette; MDX is available for any hand-authored page.
+- **No component framework.** Do not add React, Vue, Svelte, Headless UI, or another component library. Prefer native HTML and small Astro components; reach for a library only when one specific interaction genuinely requires it, and note why.
+- **Content is not duplicated.** The site owns presentation only — layout, prose styles, navigation. Any factual change belongs in `brand/`, never in the site.
+- Build it with `cd web && npm run build`.
 
 ## Scope: brand, not the design system
 

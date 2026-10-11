@@ -1,0 +1,38 @@
+---
+import { getDocs } from "../lib/brand";
+
+const docs = getDocs();
+---
+
+<section aria-labelledby="documents-heading" class="not-prose">
+  <h2
+    id="documents-heading"
+    class="font-serif text-2xl font-bold tracking-tight text-charcoal sm:text-3xl"
+  >
+    The documents
+  </h2>
+  <ul class="mt-6 grid gap-4 sm:grid-cols-2">
+    {
+      docs.map((doc) => (
+        <li>
+          <a
+            href={`/${doc.id}`}
+            class="block h-full rounded-2xl border border-pale-lavender bg-white p-5 transition-colors hover:border-bright-lilac/60 hover:bg-pale-lavender/40"
+          >
+            <span class="flex items-baseline justify-between gap-3">
+              <span class="font-serif text-lg font-bold text-charcoal">
+                {doc.title}
+              </span>
+              <span class="rounded-full bg-pale-lavender px-2 py-0.5 text-xs font-medium text-deep-purple">
+                {doc.status}
+              </span>
+            </span>
+            <p class="mt-2 text-sm leading-relaxed text-charcoal/70">
+              {doc.summary}
+            </p>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</section>
