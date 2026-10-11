@@ -1,92 +1,99 @@
 # Brand Strategy
 
-This folder defines the strategic and conceptual foundation of Numena's brand. It establishes what Numena stands for, what distinguishes it, and how it should communicate.
+This directory contains the strategic foundation of Numena's brand. It defines the market position Numena seeks to occupy, the meaning it intends to establish, and the principles that guide how it communicates.
 
-These documents guide decisions about brand communication, identity, and future applications. Together, they provide a shared reference for keeping the brand coherent as Numena evolves.
+The documents provide a shared reference for decisions across brand identity, marketing, communication, and product experience. They are intended to guide practical decisions rather than serve as standalone descriptions of the brand.
 
 ## Documents
 
 ### 01. Positioning
 
-**What place do we want Numena to occupy?**
+**Where does Numena fit, and why should it matter?**
 
-Defines Numena's place in the market, intended audience, differentiation, and competitive context.
+Defines Numena's intended position in the market, the audience it serves, the problem it addresses, and the reasons it should be considered over alternatives.
 
-- Category
-- Audience
+Includes:
+- Category and competitive context
+- Target audience and relevant needs
 - Problem and underlying tension
 - Differentiation
+- Value proposition
 - Positioning statement
-- Competitive frame
 
-### 02. Brand Meaning
+### 02. Brand Foundation
 
 **What does Numena stand for?**
 
-Establishes the central idea, beliefs, and principles behind Numena.
+Defines the central idea, beliefs, and principles that shape Numena's identity and guide its behavior.
 
+Includes:
 - Central idea
-- Brand belief
+- Brand beliefs
 - Name and meaning
 - Brand promise
-- Guiding principle
-
-### 03. Personality
-
-**What characterizes Numena?**
-
-Defines Numena's character and behavioral traits, including what the brand is and isn't.
-
-- Core characteristics
-- What Numena is and isn't
+- Guiding principles
+- Brand personality
 - Behavioral principles
 
-### 04. Messaging
+### 03. Messaging and Verbal Identity
 
-**How do we explain Numena clearly?**
+**What should Numena communicate, and how should it sound?**
 
-Establishes how Numena explains itself, communicates its value, and demonstrates its relevance to its audience.
+Translates the brand strategy into clear, consistent communication. Messaging establishes what Numena says; verbal identity establishes how it says it.
 
+Includes:
+
+**Messaging**
 - One-sentence description
-- Value proposition
+- Value proposition expression
 - Core message
 - Supporting messages
 - Elevator pitch
 
-### 05. Verbal Identity
-
-**How does Numena speak?**
-
-Defines how Numena communicates through voice, tone, vocabulary, and writing principles.
-
+**Verbal identity**
 - Voice
 - Tone
 - Writing principles
 - Preferred words
 - Words to avoid
 
-## How the Documents Work Together
+## How the Documents Relate
 
-Each document addresses a distinct question while building on the decisions established by the others.
+The documents address three connected layers of brand strategy:
 
-1. **Positioning** defines Numena's place in the market.
-2. **Brand Meaning** establishes the ideas and beliefs behind the brand.
-3. **Personality** defines the character and behavior that express those foundations.
-4. **Messaging** translates the strategy into clear, audience-facing communication.
-5. **Verbal Identity** establishes the language and principles used to communicate consistently.
+1. **Positioning** establishes Numena's intended place in the market.
+2. **Brand Foundation** defines the meaning, beliefs, and character that inform the brand.
+3. **Messaging and Verbal Identity** translate those strategic decisions into communication.
 
-The documents are interdependent. Changes to positioning or brand meaning may affect personality, messaging, and verbal identity. Updates should preserve consistency across the set.
+This is a recommended reading order, not a rigid sequence. Positioning and brand foundation inform each other and may evolve together. Messaging and verbal identity should reflect the resulting strategy rather than operate independently of it.
 
-## Scope and Relationship to Other Systems
+## Scope
 
-Brand strategy defines the intent behind Numena's brand: what it should communicate, represent, and stand for.
+Brand strategy defines what Numena stands for, how it seeks to be understood, and what should guide its expression.
 
-The [visual identity](../visual-identity/README.md) translates that intent into recognizable visual elements and rules, including the logo, color, typography, imagery, and layout.
+It is distinct from, but informs, other parts of the brand and product ecosystem:
 
-A future design system can make these decisions reusable in product interfaces through tokens, components, and interface patterns. It must also address interaction behavior, accessibility, responsive layouts, component states, and implementation.
+- **Visual identity** translates the strategy into visual elements and usage rules.
+- **Product experience** expresses the brand through interactions, functionality, and behavior.
+- **Marketing and communication materials** apply the strategy to specific audiences, channels, and contexts.
 
-Brand strategy, visual identity, and the design system are related but distinct. Each serves a different purpose, and none replaces the others.
+These areas should remain consistent with the strategy without duplicating its foundational decisions.
 
-## Intended Outcome
+## Strategic Integrity
 
-A shared understanding of what Numena means, what distinguishes it, and how it should communicate, providing a coherent foundation for brand decisions and future applications.
+The documents should distinguish between established decisions, assumptions, and hypotheses that require validation.
+
+- **Evidence:** Research or observations that support a claim.
+- **Hypothesis:** An interpretation or proposition that remains to be tested.
+- **Decision:** An explicit strategic choice.
+- **Expression:** The language or design used to communicate a decision.
+
+Not every brand decision requires formal research, but claims about audience needs, market differentiation, and customer understanding should not be presented as established facts without adequate support.
+
+## Maintaining the Strategy
+
+Treat these documents as connected working references rather than independent sources of truth.
+
+When a foundational decision changes, review the downstream implications for messaging, verbal identity, visual identity, and product experience. Keep each decision in its appropriate document and reference it elsewhere when needed instead of maintaining competing versions.
+
+The goal is a coherent, usable brand strategy that supports clear decisions as Numena develops.
