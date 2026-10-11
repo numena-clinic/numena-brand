@@ -34,7 +34,7 @@ Four principles, in order of weight: thoughtful, human, rigorous, quietly confid
 - **Rigorous.** Say what we know; don't hide uncertainty (might, possible, we don't know yet are strengths); explain the path to a conclusion.
 - **Quietly confident.** Clear statements over slogans; no hype; restraint.
 
-Avoid: leverage, optimize workflows, unlock insights, drive efficiency, empower practitioners, next-generation, AI-powered. The tone-of-voice doc has the complete word list and before/after pairs.
+Avoid: leverage, optimize workflows, unlock insights, drive efficiency, empower practitioners, next-generation, AI-powered. The brand presentation's Voice section carries the complete word list and before/after pairs.
 
 ## Color
 
@@ -80,8 +80,6 @@ Proportion on a typical screen: foundation 80–90%, deep purple 8–15%, bright
 
 ## Where it lives
 
-- `docs/01-brand-foundation.md` — purpose, philosophy, positioning, values, boundary, naming.
-- `docs/02-tone-of-voice.md` — voice principles, word lists, example pairs.
 - `docs/03-color-system.md` — palette, proportion, contrast ratios, usage guide.
 - `docs/04-typography.md` — typefaces, scale, hierarchy, spacing, accessibility.
 - `docs/05-iconography.md` — role, specs, sizes, states, core icon set.
