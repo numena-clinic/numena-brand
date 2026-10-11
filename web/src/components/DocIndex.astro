@@ -10,7 +10,7 @@ const sections = getSections();
       <section aria-labelledby={`${section.id}-heading`}>
         <h2
           id={`${section.id}-heading`}
-          class="font-serif text-2xl font-bold tracking-tight text-charcoal sm:text-3xl"
+          class="font-serif text-2xl font-bold tracking-tight text-ink-plum sm:text-3xl"
         >
           {section.name}
         </h2>
@@ -19,12 +19,12 @@ const sections = getSections();
             <li>
               <a
                 href={`/${doc.path}`}
-                class="block h-full rounded-2xl border border-pale-lavender bg-white p-5 transition-colors hover:border-bright-lilac/60 hover:bg-pale-lavender/40"
+                class="block h-full rounded-2xl border border-pale-lavender bg-white p-5 transition-colors hover:border-vibrant-purple/60 hover:bg-pale-lavender/40"
               >
-                <span class="font-serif text-lg font-bold text-charcoal">
+                <span class="font-serif text-lg font-bold text-ink-plum">
                   {doc.title}
                 </span>
-                <span class="mt-1 block text-xs uppercase tracking-widest text-charcoal/40">
+                <span class="mt-1 block text-xs uppercase tracking-widest text-ink-plum/40">
                   {doc.sectionName}
                 </span>
               </a>

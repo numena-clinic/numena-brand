@@ -11,7 +11,7 @@ const { doc } = Astro.props;
 
 <DocLayout title={doc.title}>
   <article class="mx-auto max-w-3xl px-5 py-12 sm:px-8">
-    <p class="mb-4 text-xs font-medium uppercase tracking-widest text-bright-lilac">
+    <p class="mb-4 text-xs font-medium uppercase tracking-widest text-vibrant-purple">
       {doc.sectionName}
     </p>
     {
@@ -19,10 +19,10 @@ const { doc } = Astro.props;
         <div class="prose" set:html={doc.html} />
       ) : (
         <>
-          <h1 class="font-serif text-3xl font-bold tracking-tight text-charcoal sm:text-4xl">
+          <h1 class="font-serif text-3xl font-bold tracking-tight text-ink-plum sm:text-4xl">
             {doc.title}
           </h1>
-          <p class="mt-4 text-charcoal/40">
+          <p class="mt-4 text-ink-plum/40">
             This document has not been written yet.
           </p>
         </>

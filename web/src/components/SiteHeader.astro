@@ -9,7 +9,7 @@ const current = Astro.url.pathname.replace(/^\/|\/$/g, "");
   <div
     class="mx-auto flex max-w-5xl flex-wrap items-center gap-x-2 gap-y-1 px-5 py-3 sm:px-8"
   >
-    <a href="/" class="mr-2 flex items-center gap-2 font-serif text-lg font-bold text-charcoal">
+    <a href="/" class="mr-2 flex items-center gap-2 font-serif text-lg font-bold text-ink-plum">
       <img src="/favicon.svg" alt="" width="22" height="22" />
       Numena
     </a>
@@ -41,7 +41,7 @@ const current = Astro.url.pathname.replace(/^\/|\/$/g, "");
                 <a
                   href={`/${doc.path}`}
                   class:list={[
-                    "block rounded-lg px-3 py-1.5 text-sm text-charcoal/80 hover:bg-pale-lavender hover:text-deep-purple",
+                    "block rounded-lg px-3 py-1.5 text-sm text-ink-plum/80 hover:bg-pale-lavender hover:text-deep-purple",
                     current === doc.path && "bg-pale-lavender text-deep-purple",
                   ]}
                 >

@@ -3,12 +3,20 @@
 
 /* Brand tokens, exposed to Tailwind v4 utilities and plain CSS alike. */
 @theme {
-  --color-deep-purple: #462279;
-  --color-pale-lavender: #ebe7f0;
-  --color-soft-peach: #f39d72;
-  --color-bright-cyan: #47ddf3;
-  --color-bright-lilac: #ae6df0;
-  --color-charcoal: #2b2b33;
+  /* Foundation — identity and structure (docs/visual-identity/color.md). */
+  --color-deep-purple: #4c207f;
+  --color-ink-plum: #221a2a;
+  --color-pale-lavender: #eee9f3;
+
+  /* Expression — selective emphasis. */
+  --color-vibrant-purple: #8e36f4;
+  --color-vibrant-cyan: #25e4f8;
+  --color-vibrant-tangerine: #f57a44;
+
+  /* Supporting tints. */
+  --color-soft-purple: #e8d7fd;
+  --color-soft-cyan: #d3fafe;
+  --color-soft-tangerine: #fde4da;
 
   --font-sans: "Albert Sans", system-ui, -apple-system, "Segoe UI", Roboto,
     sans-serif;
@@ -23,22 +31,22 @@
 
   body {
     background: #fff;
-    color: var(--color-charcoal);
+    color: var(--color-ink-plum);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
   }
 
   :focus-visible {
-    outline: 2px solid var(--color-bright-lilac);
+    outline: 2px solid var(--color-vibrant-purple);
   outline-offset: 2px;
-    box-shadow: 0 0 0 5px rgba(43, 43, 51, 0.85);
+    box-shadow: 0 0 0 5px rgba(34, 26, 42, 0.85);
     border-radius: 2px;
   }
 
   ::selection {
     background: var(--color-pale-lavender);
-    color: var(--color-charcoal);
+    color: var(--color-ink-plum);
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -58,7 +66,7 @@
 
 /* Prose — styles the brand Markdown documents rendered into pages. */
 .prose {
-  color: var(--color-charcoal);
+  color: var(--color-ink-plum);
   font-size: 1.0625rem;
   line-height: 1.7;
   overflow-wrap: anywhere;
@@ -135,7 +143,7 @@
 }
 
 .prose li::marker {
-  color: var(--color-bright-lilac);
+  color: var(--color-vibrant-purple);
 }
 
 .prose code {
@@ -147,7 +155,7 @@
 }
 
 .prose pre {
-  background: var(--color-charcoal);
+  background: var(--color-ink-plum);
   color: #f6f6f8;
   padding: 1.1em 1.3em;
   border-radius: 10px;
@@ -161,11 +169,11 @@
 }
 
 .prose blockquote {
-  border-left: 3px solid var(--color-bright-lilac);
+  border-left: 3px solid var(--color-vibrant-purple);
   background: var(--color-pale-lavender);
   padding: 0.9em 1.2em;
   border-radius: 0 8px 8px 0;
-  color: var(--color-charcoal);
+  color: var(--color-ink-plum);
 }
 
 .prose blockquote > * + * {
@@ -265,5 +273,5 @@
   background: #fff;
   border: 1px solid var(--color-pale-lavender);
   border-radius: 12px;
-  box-shadow: 0 12px 30px rgba(43, 43, 51, 0.12);
+  box-shadow: 0 12px 30px rgba(34, 26, 42, 0.12);
 }
