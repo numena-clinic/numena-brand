@@ -1,54 +1,54 @@
-The two folders serve different purposes: `brand-strategy/` defines what Numena stands for and how it communicates; `visual-identity/` defines how Numena is recognized visually.
+# Numena Brand Documentation
 
-## 1. `brand-strategy/`
+This directory documents the strategic and visual foundations of the Numena brand. It defines the intent behind the brand and how that intent is expressed through its visual identity.
 
-Purpose: Define the strategic and conceptual foundation of the brand so decisions about communication, identity, and future applications remain coherent.
+The documentation is organized into two complementary areas.
 
-| Document             | Purpose                                                                                            |
-| -------------------- | -------------------------------------------------------------------------------------------------- |
-| `positioning.md`     | Defines Numena's place in the market, intended audience, differentiation, and competitive context. |
-| `brand-meaning.md`   | Establishes the central idea, beliefs, name meaning, promise, and guiding principle behind Numena. |
-| `personality.md`     | Defines Numena's character, behavioral traits, and what the brand is and isn't.                    |
-| `messaging.md`       | Establishes how Numena explains itself, its value, and its relevance to its audience.              |
-| `verbal-identity.md` | Defines how Numena communicates through voice, tone, vocabulary, and writing principles.           |
+## Brand Strategy
 
-The outcome: A shared understanding of what Numena means, what distinguishes it, and how it should communicate.
+[`brand-strategy/`](./brand-strategy/)
 
-## 2. `visual-identity/`
+**The intent.**
 
-Purpose: Define the visual elements and rules that make Numena recognizable and ensure those elements work together consistently across applications.
+Defines what Numena stands for, whom it serves, how it is positioned, and what it aims to communicate. It establishes the strategic direction and principles that guide brand decisions.
 
-| Document              | Purpose                                                                                                  |
-| --------------------- | -------------------------------------------------------------------------------------------------------- |
-| `logo-system.md`      | Defines the logo, symbol, variations, proportions, spacing, and usage restrictions.                      |
-| `color.md`            | Defines the brand color palette, color relationships, and usage rules.                                   |
-| `typography.md`       | Defines typefaces, hierarchy, weights, and typographic behavior.                                         |
-| `imagery.md`          | Defines photography, illustration, image selection, and art direction.                                   |
-| `graphic-language.md` | Defines supporting graphic elements, shapes, patterns, textures, and iconography.                        |
-| `layout.md`           | Defines compositional principles, alignment, visual balance, and the use of space in brand applications. |
+## Visual Identity
 
-The outcome: A coherent visual identity that people can recognize and others can apply without inventing a new visual direction each time.
+[`visual-identity/`](./visual-identity/)
 
-## How they relate
+**The expression of intent.**
 
-### `brand-strategy/`
+Translates the brand's strategic foundations into a visual language. It defines how Numena communicates through color, typography, logo, layout, imagery, and graphic elements.
 
-Defines the intent.
+## How They Work Together
 
-What should Numena communicate, represent, and stand for?
+Brand strategy establishes the intent. Visual identity gives that intent a recognizable and consistent visual expression.
 
-### `visual-identity/`
+The relationship is directional: visual decisions should reinforce the brand's strategic foundations, not exist independently of them.
 
-Expresses the intent visually.
+| Brand strategy | Visual identity |
+|---|---|
+| Defines the intent | Expresses the intent |
+| Establishes meaning | Makes meaning perceptible |
+| Guides brand decisions | Guides visual decisions |
+| Defines what Numena communicates | Defines how Numena communicates visually |
 
-What visual choices make that meaning recognizable?
+## Recommended Reading Order
 
-### Design system (later)
+1. **Start with brand strategy** to understand the intent behind Numena.
+2. **Continue with visual identity** to understand how that intent is expressed visually.
+3. **Refer to individual documents** when making decisions or applying the brand.
 
-Makes the decisions reusable in products.
+## Scope
 
-How do the brand's visual and behavioral principles translate into tokens, components, and interface patterns?
+This documentation defines Numena's brand system: its strategic intent and visual expression.
 
-One important boundary: visual identity is not the same as a design system. Visual identity governs brand expression; the design system also needs to address interaction behavior, accessibility, responsive layouts, component states, and implementation.
+It is not a design system. Interface components, reusable UI patterns, implementation specifications, and product-level design tokens belong to a separate scope.
 
-This separation lets you build Numena's brand deliberately before committing to the technical details of its product interfaces.
+## Maintaining the Documentation
+
+- Keep each document focused on its specific purpose.
+- Avoid duplicating guidance across documents; link to the authoritative source instead.
+- Update this index when documents or folders change.
+- Maintain alignment between strategic intent and visual expression.
+- Document unresolved decisions as open questions rather than established guidelines.
