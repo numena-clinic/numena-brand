@@ -1,3 +1,11 @@
+---
+title: Iconography
+section: 05-visual-system
+order: 5
+status: draft
+summary: Role, specs, sizes, states, and the core icon set.
+---
+
 # Numena: Iconography
 
 Icons in Numena are quiet helpers. They support the words, mark a few repeating ideas, and stay out of the way of the reasoning.

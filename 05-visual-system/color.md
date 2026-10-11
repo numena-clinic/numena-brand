@@ -1,3 +1,11 @@
+---
+title: Color
+section: 05-visual-system
+order: 2
+status: draft
+summary: Palette, proportion, contrast ratios, and usage.
+---
+
 # Numena: Color System
 
 ## Role of color

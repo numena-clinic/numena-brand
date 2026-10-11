@@ -1,9 +1,9 @@
-/* Numena brand tokens — extracted from docs/03 (color) and docs/04 (typography).
-   Values are the current, explicit source: the mark's own colors are legacy and
-   under review, so tokens follow the docs. */
+/* Numena brand tokens — extracted from 05-visual-system/color.md and
+   05-visual-system/typography.md. Values are the current, explicit source: the
+   mark's own colors are legacy and under review, so tokens follow the docs. */
 
 :root {
-  /* Palette (docs/03) */
+  /* Palette (color.md) */
   --deep-purple: #462279;
   --pale-lavender: #ebe7f0;
   --soft-peach: #f39d72;
@@ -25,7 +25,7 @@
   /* Focus */
   --color-focus: var(--bright-lilac);
 
-  /* Type faces (docs/04) */
+  /* Type faces (typography.md) */
   --font-serif: "Tiempos Text", Georgia, "Times New Roman", serif;
   --font-sans: "Albert Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 
@@ -49,7 +49,7 @@
   --text-caption: 0.75rem;
   --text-caption-line: 1rem;
 
-  /* Spacing — 4 px grid (docs/04) */
+  /* Spacing — 4 px grid (typography.md) */
   --space-xxs: 4px;
   --space-xs: 8px;
   --space-sm: 12px;

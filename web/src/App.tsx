@@ -78,7 +78,7 @@ export default function App() {
       <footer className="site-footer">
         <div className="shell" style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", gap: "var(--space-md)" }}>
           <p className="caption">
-            Numena — brand presentation. Built from the Numena brand system (docs/03–05 and the brand strategy).
+            Numena — brand presentation. Built from the Numena brand system (05-visual-system and the brand strategy).
           </p>
           <p className="caption">
             Tiempos Text © Klim Type Foundry, licensed — excluded from the repo. Albert Sans ©

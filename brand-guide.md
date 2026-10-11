@@ -1,6 +1,6 @@
 # Numena: Brand Guide
 
-A working reference. Each section here condenses a full document in `docs/`; use the linked doc when you need the reasoning behind a rule.
+A working reference. Each section here condenses a full document in the numbered brand sections; use the linked doc when you need the reasoning behind a rule.
 
 ## Identity
 
@@ -80,6 +80,6 @@ Proportion on a typical screen: foundation 80–90%, deep purple 8–15%, bright
 
 ## Where it lives
 
-- `docs/03-color-system.md` — palette, proportion, contrast ratios, usage guide.
-- `docs/04-typography.md` — typefaces, scale, hierarchy, spacing, accessibility.
-- `docs/05-iconography.md` — role, specs, sizes, states, core icon set.
+- `05-visual-system/color.md` — palette, proportion, contrast ratios, usage guide.
+- `05-visual-system/typography.md` — typefaces, scale, hierarchy, spacing, accessibility.
+- `05-visual-system/iconography.md` — role, specs, sizes, states, core icon set.

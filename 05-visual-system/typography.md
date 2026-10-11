@@ -1,3 +1,11 @@
+---
+title: Typography
+section: 05-visual-system
+order: 3
+status: draft
+summary: Typefaces, scale, hierarchy, spacing, and accessibility.
+---
+
 # Numena: Typography
 
 Tiempos Text gives Numena its voice. Albert Sans makes that voice usable. The serif appears where attention is earned, and the sans carries everything that has to work.

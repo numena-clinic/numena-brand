@@ -2,15 +2,29 @@
 
 The brand identity, voice, and design system for Numena.
 
-## Quick reference
+## Start here
 
-A working summary of everything below: [brand-guide.md](brand-guide.md).
+- **[llms.txt](llms.txt)** — orientation for people and AI agents: how this repo is organized and where to look.
+- **[manifest.json](manifest.json)** — machine-readable index of every document (section, order, status, summary).
+- **[brand-guide.md](brand-guide.md)** — a one-page working summary of the whole brand.
 
-## Documents (`docs/`)
+## Documents
 
-1. [Color System](docs/03-color-system.md) — palette, proportion, contrast ratios, usage guide.
-2. [Typography](docs/04-typography.md) — typefaces, scale, hierarchy, spacing, accessibility.
-3. [Iconography](docs/05-iconography.md) — role, specs, sizes, states, core icon set.
+Five numbered sections. Each has a README with its reading order, and each document carries front matter (`title`, `section`, `order`, `status`, `summary`).
+
+| Section | Covers |
+| --- | --- |
+| [01-strategy](01-strategy/README.md) | Context, audience, purpose, vision, positioning, promise, principles |
+| [02-meaning](02-meaning/README.md) | Central idea, name and origin, belief, story, semantic framework |
+| [03-character](03-character/README.md) | Personality, tensions, voice and tone, verbal identity |
+| [04-visual-semantics](04-visual-semantics/README.md) | Creative direction, visual concepts, rationale |
+| [05-visual-system](05-visual-system/README.md) | Logo, color, typography, graphic elements, iconography, imagery, layout, usage rules |
+
+Documents with `status: stub` are placeholders awaiting content. To validate front matter and links and regenerate the index:
+
+```sh
+node scripts/build-manifest.mjs
+```
 
 ## Assets (`assets/`)
 
