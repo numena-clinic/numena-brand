@@ -4,127 +4,128 @@
 
 This document defines what **Numena stands for** at its core.
 
-It establishes the ideas and beliefs that should remain consistent as the product, brand, and organization evolve.
+It establishes the central idea, beliefs, and meaning that should remain recognizable as the product, brand, and organization evolve.
 
-Brand meaning is not a tagline or marketing copy. It is the underlying idea that gives Numena coherence.
+Brand meaning is not a product description, feature set, or marketing tagline.
 
----
+It answers a simpler question:
 
-## 1. Central Idea
-
-### Better thinking, made visible.
-
-Psychological practice involves making sense of incomplete, complex, and evolving information.
-
-Numena exists to help psychologists organize that thinking so they can see what they know, what they do not know, what they are considering, and how their understanding changes over time.
-
-The central idea is not automation.
-
-It is **clarity of thought**.
-
-Numena helps turn scattered observations and clinical reasoning into a structure that can be examined, questioned, and developed.
+> **Why should Numena exist in the world?**
 
 ---
 
-## 2. Brand Belief
+# 1. Central Idea
 
-### Good practice depends on the quality of thinking behind it.
+## Better thinking, made visible.
 
-Psychologists work with uncertainty. Observations can be incomplete. Interpretations can change. Different explanations can fit the same evidence.
+Human understanding is rarely immediate or complete.
 
-Numena believes that professional judgment becomes stronger when thinking is made explicit enough to be examined.
+There is often more beneath what can first be seen: context, relationships, uncertainty, competing interpretations, and things that have not yet been understood.
 
-That means creating space for:
+Numena stands for making that thinking more visible.
 
-- observations rather than premature conclusions
-- patterns rather than isolated information
-- hypotheses rather than assumptions presented as facts
-- evidence for and against an interpretation
-- missing information and unanswered questions
-- competing explanations
-- uncertainty
-- decisions and revisions over time
+Not by eliminating complexity, but by giving it enough structure to be understood.
 
-Numena does not aim to replace professional judgment.
+**Better thinking, made visible.**
 
-It aims to **give professional judgment a better environment in which to operate**.
+This is the central idea behind the brand.
 
 ---
 
-## 3. Name and Meaning
+# 2. Brand Belief
 
-### Numena
+## Good work depends on the quality of the thinking behind it.
 
-**Numena** is derived from the idea of the **numen**: a presence, force, or quality that is difficult to fully define but can be experienced or sensed.
+Numena believes that meaningful professional work requires more than information.
 
-For Numena, the name is less about a literal definition and more about the idea of **what is present beneath what is immediately visible**.
+It requires attention, interpretation, judgment, reflection, and the willingness to reconsider what we think we know.
 
-Psychological practice often involves exactly this kind of work.
+Complex human situations cannot always be reduced to simple answers.
 
-What is being observed?
+Better thinking does not mean having certainty about everything.
 
-What might it mean?
+It means being able to distinguish what is known from what is assumed, remain open to other possibilities, and change one's understanding when the evidence changes.
 
-What else could explain it?
+Numena therefore values:
 
-What remains unknown?
+- **curiosity over premature certainty**
+- **understanding over simplification**
+- **reflection over reaction**
+- **judgment over automation**
+- **clarity over noise**
+- **revision over finality**
 
-The name therefore supports a broader brand idea:
-
-> **Look beneath the surface. Make sense of what is there.**
-
-The name should not be over-explained in everyday communication. Its role is to provide conceptual depth to the brand, not become a mythology that the product has to constantly explain.
+These are beliefs the brand can carry beyond any particular product or technology.
 
 ---
 
-## 4. Brand Promise
+# 3. Name and Meaning
 
-### Numena helps psychologists think with greater clarity and continuity.
+## Numena
 
-The promise is deliberately modest.
+Numena is derived from **numen**, a word associated with a presence, influence, or quality that may be sensed without being immediately defined or explained.
+
+For the brand, the significance is not the literal definition.
+
+It is the idea of **what exists beneath what is immediately visible**.
+
+That creates a natural connection to the kind of thinking Numena values:
+
+> What are we seeing?  
+> What might be beneath it?  
+> What else could explain it?  
+> What remains unknown?
+
+The name gives Numena conceptual depth without requiring a literal interpretation.
+
+It should not become a mythology that the brand constantly explains.
+
+The meaning is there to inform the brand, not to dominate its communication.
+
+---
+
+# 4. Brand Promise
+
+## Make complex thinking easier to see.
+
+Numena promises clarity without pretending that complexity can always be resolved.
+
+It should help create conditions for more deliberate thinking while respecting the uncertainty and ambiguity inherent in human experience.
+
+The promise is intentionally modest.
 
 Numena does not promise:
 
-- better diagnoses
 - certainty
-- automated clinical expertise
-- replacement of professional judgment
+- perfect understanding
 - objectively correct interpretations
+- technological authority
+- the elimination of complexity
 
-Instead, it promises to help create a clearer working representation of the psychologist's own reasoning.
-
-The value is in making complex thinking easier to **organize, inspect, revisit, and develop**.
-
----
-
-## 5. Guiding Principle
-
-### Make thinking visible without pretending it is certain.
-
-This principle should guide both the product and the brand.
-
-Numena should favor:
-
-**Explicitness over implication**  
-Make important reasoning visible rather than burying it in interfaces or prose.
-
-**Evidence over plausibility**  
-Distinguish what is observed from what is inferred.
-
-**Uncertainty over false confidence**  
-Allow ambiguity to remain visible when the information does not justify certainty.
-
-**Professional judgment over automation**  
-Technology should support the psychologist's reasoning, not impersonate it.
-
-**Revision over finality**  
-Understanding can change as new information appears.
-
-**Clarity over complexity**  
-Structure should make thinking easier to navigate, not create bureaucracy around it.
+Instead, the brand promises to **make room for clearer thinking**.
 
 ---
 
-## The Meaning in One Sentence
+# 5. Guiding Principle
 
-> **Numena stands for making psychological thinking clearer, more explicit, and easier to examine without pretending that complex human experience can be reduced to certainty.**
+## Make thinking visible without pretending it is certain.
+
+This is the simplest expression of what Numena stands for.
+
+It captures the tension at the heart of the brand:
+
+**Make things clearer, but don't make them simpler than they really are.**
+
+**Create structure, but don't confuse structure with truth.**
+
+**Support understanding, but don't pretend uncertainty has disappeared.**
+
+**Use technology, but don't mistake automation for judgment.**
+
+**Seek clarity, but remain open to revision.**
+
+---
+
+# The Meaning in One Sentence
+
+> **Numena stands for clearer, more deliberate thinking in a world where complex human experience cannot always be reduced to simple answers.**
