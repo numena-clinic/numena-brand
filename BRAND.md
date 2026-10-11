@@ -51,7 +51,9 @@ Source: [Messaging and Verbal Identity](docs/brand-strategy/messaging.md).
 
 **Type:** two typefaces with distinct roles — **Tiempos Text** (Klim Type Foundry) for editorial character, **Albert Sans** (Google Fonts) for everything functional.
 
-Sources: [Color System](docs/visual-identity/color.md), [Typography](docs/visual-identity/typography.md), [Logo System](docs/visual-identity/logo-system.md), [Imagery](docs/visual-identity/imagery.md), [Layout](docs/visual-identity/layout.md).
+**Icons:** one library, **Iconoir** (MIT), in a single regular-outline style on a 24 px grid, at four sizes only (16/20/24/32 px). Icons support the words beside them and never deliver a verdict.
+
+Sources: [Color System](docs/visual-identity/color.md), [Typography](docs/visual-identity/typography.md), [Logo System](docs/visual-identity/logo-system.md), [Iconography](docs/visual-identity/iconography.md), [Imagery](docs/visual-identity/imagery.md), [Layout](docs/visual-identity/layout.md).
 
 ## Status
 

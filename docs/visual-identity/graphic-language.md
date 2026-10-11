@@ -4,7 +4,7 @@
 
 Numena’s graphic language is the visual behavior that connects the individual parts of the identity into a coherent system.
 
-It defines how **form, color, typography, imagery, space, and graphic elements** work together. It is not a collection of decorative rules. It is a way of expressing Numena’s character consistently across different contexts.
+It defines how **form, color, typography, iconography, imagery, space, and graphic elements** work together. It is not a collection of decorative rules. It is a way of expressing Numena’s character consistently across different contexts.
 
 The graphic language should feel:
 
@@ -365,6 +365,7 @@ The individual identity components then provide the specific rules:
 - [`color.md`](./color.md) — color strategy and usage
 - [`typography.md`](./typography.md) — typefaces and typographic hierarchy
 - [`logo-system.md`](./logo-system.md) — logo construction and usage
+- [`iconography.md`](./iconography.md) — the icon system and usage rules
 - [`imagery.md`](./imagery.md) — photographic and visual imagery
 - [`layout.md`](./layout.md) — composition and layout principles
 

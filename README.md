@@ -20,9 +20,11 @@ The brand lives in [`docs/`](docs), organized into two complementary areas. Each
 | **Brand strategy** — the intent | [Positioning](docs/brand-strategy/positioning.md) | Category, audience, problem, differentiation, value proposition |
 | | [Brand Foundation](docs/brand-strategy/brand-foundation.md) | Central idea, beliefs, promise, guiding principle, personality |
 | | [Messaging and Verbal Identity](docs/brand-strategy/messaging.md) | Product description, messages, voice, tone, vocabulary |
-| **Visual identity** — the expression of intent | [Color System](docs/visual-identity/color.md) | Palette, roles, hierarchy, accessibility |
+| **Visual identity** — the expression of intent | [Graphic Language](docs/visual-identity/graphic-language.md) | How the visual elements behave together — shape, color, typography, space, composition |
+| | [Color System](docs/visual-identity/color.md) | Palette, roles, hierarchy, accessibility |
 | | [Typography](docs/visual-identity/typography.md) | Typefaces, their roles, typographic hierarchy |
 | | [Logo System](docs/visual-identity/logo-system.md) | Logo assets, variations, application rules |
+| | [Iconography](docs/visual-identity/iconography.md) | Icon system (Iconoir), sizes, color and states, usage |
 | | [Imagery](docs/visual-identity/imagery.md) | Principles for photography, illustration, abstract imagery |
 | | [Layout](docs/visual-identity/layout.md) | Composition, spacing, alignment, hierarchy, balance |
 

@@ -1,6 +1,6 @@
 # Visual Identity
 
-This section defines how Numena’s brand is expressed visually. It documents the principles, assets, and rules that guide the use of color, typography, logo, imagery, and layout across brand communications.
+This section defines how Numena’s brand is expressed visually. It documents the principles, assets, and rules that guide the use of color, typography, logo, iconography, imagery, and layout across brand communications.
 
 The goal is to create a recognizable and consistent visual identity without limiting its application to a single medium or format.
 
@@ -12,6 +12,7 @@ The goal is to create a recognizable and consistent visual identity without limi
 | [`color.md`](./color.md) | Defines the brand color palette, the role of each color, and guidance for its use. |
 | [`typography.md`](./typography.md) | Defines the typefaces, their roles, and the principles governing typographic hierarchy and use. |
 | [`logo-system.md`](./logo-system.md) | Documents the logo assets, available variations, and rules for their application. |
+| [`iconography.md`](./iconography.md) | Defines the icon system, sizes, color and states, and rules for using icons. |
 | [`imagery.md`](./imagery.md) | Defines the principles for selecting, creating, and using imagery in brand communications. |
 | [`layout.md`](./layout.md) | Establishes the principles for composition, spacing, alignment, hierarchy, and visual balance. |
 

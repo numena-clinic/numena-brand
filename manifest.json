@@ -61,6 +61,12 @@
           "summary": "The logo assets, available variations, and rules for their application."
         },
         {
+          "id": "iconography",
+          "path": "docs/visual-identity/iconography.md",
+          "title": "Iconography",
+          "summary": "The icon system (Iconoir), sizes, color and states, and rules for using icons."
+        },
+        {
           "id": "imagery",
           "path": "docs/visual-identity/imagery.md",
           "title": "Imagery",
