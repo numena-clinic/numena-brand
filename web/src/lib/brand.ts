@@ -1,5 +1,5 @@
 import { readFileSync, readdirSync, existsSync } from "node:fs";
-import { resolve, join, basename } from "node:path";
+import { resolve, join, basename, posix } from "node:path";
 import { marked } from "marked";
 
 // The repository root, one level above web/. docs/ is the source of truth;
@@ -45,12 +45,13 @@ function frontmatter(markdown: string): Record<string, string> {
 }
 
 // Docs cross-link each other with relative .md paths (e.g. `./typography.md`,
-// `../color.md`). Rewrite them to the site's document routes so they resolve.
+// `../brand-strategy/positioning.md`). Resolve them against the current
+// document's section and rewrite to the site's document route.
 function rewriteDocLinks(html: string, sectionId: string): string {
   return html.replace(/href="([^"]*?\.md)(#[^"]*)?"/gi, (match, path, hash = "") => {
     if (/^[a-z]+:\/\//i.test(path)) return match;
-    const name = path.replace(/^.*\//, "").replace(/\.md$/i, "");
-    return `href="/${sectionId}/${name}${hash}"`;
+    const route = posix.normalize(posix.join("/", sectionId, path)).replace(/^\/+/, "").replace(/\.md$/i, "");
+    return `href="/${route}${hash}"`;
   });
 }
 
