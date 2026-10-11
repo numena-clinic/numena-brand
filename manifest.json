@@ -1,136 +1,76 @@
 {
-  "name": "Numena: Brand",
-  "description": "The brand identity, voice, and visual system for Numena — written as a small set of Markdown documents with an explicit dependency graph.",
-  "generator": "scripts/build-manifest.mjs",
-  "conventions": {
-    "layout": "Flat brand/ directory; each document is one file.",
-    "frontMatter": [
-      "title",
-      "status",
-      "summary",
-      "dependsOn",
-      "informs"
-    ],
-    "status": [
-      "draft",
-      "in-review",
-      "approved"
-    ],
-    "readingOrder": "Documents sorted so every dependency is read before the document that needs it.",
-    "authority": "Each decision has one authoritative document; summaries never override their sources."
-  },
-  "documents": [
+  "name": "Numena Brand",
+  "description": "The brand strategy and visual identity for Numena, documented in Markdown under docs/ and rendered by the site in web/.",
+  "source": "docs/",
+  "note": "Hand-maintained structural index of docs/. docs/ is the source of truth; update this when documents change.",
+  "areas": [
     {
-      "id": "foundation",
-      "path": "brand/foundation.md",
-      "title": "Foundation",
-      "status": "draft",
-      "summary": "Why Numena exists, what it believes, who it is for, how it is positioned, the boundary it keeps, and how it talks about itself.",
-      "dependsOn": [],
-      "informs": [
-        "voice",
-        "visual-language",
-        "logo",
-        "color",
-        "typography",
-        "iconography",
-        "web"
+      "id": "brand-strategy",
+      "title": "Brand Strategy",
+      "role": "The intent",
+      "index": "docs/brand-strategy/README.md",
+      "documents": [
+        {
+          "id": "positioning",
+          "path": "docs/brand-strategy/positioning.md",
+          "title": "Positioning",
+          "summary": "Numena's intended category, audience, problem, value proposition, and candidate differentiation."
+        },
+        {
+          "id": "brand-foundation",
+          "path": "docs/brand-strategy/brand-foundation.md",
+          "title": "Brand Foundation",
+          "summary": "What Numena stands for: its central idea, beliefs, promise, and character."
+        },
+        {
+          "id": "messaging",
+          "path": "docs/brand-strategy/messaging.md",
+          "title": "Messaging and Verbal Identity",
+          "summary": "What Numena communicates and how: product description, value proposition, messages, voice, and tone."
+        }
       ]
     },
     {
-      "id": "visual-language",
-      "path": "brand/visual-language.md",
-      "title": "Visual language",
-      "status": "draft",
-      "summary": "How the visual system is applied — restraint, surfaces, accent roles, spacing, and composition.",
-      "dependsOn": [
-        "foundation"
-      ],
-      "informs": [
-        "logo",
-        "color",
-        "typography",
-        "iconography",
-        "web"
-      ]
-    },
-    {
-      "id": "color",
-      "path": "brand/color.md",
-      "title": "Color",
-      "status": "draft",
-      "summary": "The palette, its intended meaning, proportion, and accessibility rules.",
-      "dependsOn": [
-        "foundation",
-        "visual-language"
-      ],
-      "informs": [
-        "logo",
-        "web",
-        "design-system"
-      ]
-    },
-    {
-      "id": "iconography",
-      "path": "brand/iconography.md",
-      "title": "Iconography",
-      "status": "draft",
-      "summary": "Role, specs, sizes, states, and the core icon set.",
-      "dependsOn": [
-        "foundation",
-        "visual-language"
-      ],
-      "informs": [
-        "web",
-        "design-system"
-      ]
-    },
-    {
-      "id": "typography",
-      "path": "brand/typography.md",
-      "title": "Typography",
-      "status": "draft",
-      "summary": "Typefaces, scale, hierarchy, spacing, and accessibility.",
-      "dependsOn": [
-        "foundation",
-        "visual-language"
-      ],
-      "informs": [
-        "web",
-        "design-system"
-      ]
-    },
-    {
-      "id": "logo",
-      "path": "brand/logo.md",
-      "title": "Logo",
-      "status": "draft",
-      "summary": "The marks, lockups, color specifications, clear space, and usage rules.",
-      "dependsOn": [
-        "foundation",
-        "color",
-        "typography"
-      ],
-      "informs": [
-        "web"
-      ]
-    },
-    {
-      "id": "voice",
-      "path": "brand/voice.md",
-      "title": "Voice",
-      "status": "draft",
-      "summary": "How Numena writes and speaks — principles, examples, and words to avoid.",
-      "dependsOn": [
-        "foundation"
-      ],
-      "informs": [
-        "web"
+      "id": "visual-identity",
+      "title": "Visual Identity",
+      "role": "The expression of intent",
+      "index": "docs/visual-identity/README.md",
+      "documents": [
+        {
+          "id": "color",
+          "path": "docs/visual-identity/color.md",
+          "title": "Color System",
+          "summary": "The brand palette, the role of each color, and guidance for its use."
+        },
+        {
+          "id": "typography",
+          "path": "docs/visual-identity/typography.md",
+          "title": "Typography",
+          "summary": "The typefaces, their roles, and the principles governing typographic hierarchy and use."
+        },
+        {
+          "id": "logo-system",
+          "path": "docs/visual-identity/logo-system.md",
+          "title": "Logo System",
+          "summary": "The logo assets, available variations, and rules for their application."
+        },
+        {
+          "id": "imagery",
+          "path": "docs/visual-identity/imagery.md",
+          "title": "Imagery",
+          "summary": "The principles for selecting, creating, and using imagery in brand communications."
+        },
+        {
+          "id": "layout",
+          "path": "docs/visual-identity/layout.md",
+          "title": "Layout",
+          "summary": "The principles for composition, spacing, alignment, hierarchy, and visual balance."
+        }
       ]
     }
   ],
   "consumers": [
-    "design-system",
-    "web"
+    "web",
+    "design-system"
   ]
 }

@@ -1,44 +1,57 @@
 ---
-import { getNav } from "../lib/brand";
-import logoText from "../../../assets/logo/logo-text.svg";
+import { getSections } from "../lib/brand";
 
-const nav = getNav();
-const current = Astro.url.pathname.replace(/\/$/, "") || "/";
+const sections = getSections();
+const current = Astro.url.pathname.replace(/^\/|\/$/g, "");
 ---
 
-<header
-  class="sticky top-0 z-50 border-b border-pale-lavender/70 bg-white/90 backdrop-blur"
->
+<header class="sticky top-0 z-40 border-b border-pale-lavender/70 bg-white/90 backdrop-blur">
   <div
-    class="mx-auto flex max-w-6xl flex-col gap-3 px-5 py-3 sm:flex-row sm:items-center sm:justify-between sm:gap-6 sm:px-8"
+    class="mx-auto flex max-w-5xl flex-wrap items-center gap-x-2 gap-y-1 px-5 py-3 sm:px-8"
   >
-    <a href="/" class="shrink-0" aria-label="Numena brand home">
-      <img src={logoText.src} alt="Numena" height="22" class="h-[22px] w-auto" />
+    <a href="/" class="mr-2 flex items-center gap-2 font-serif text-lg font-bold text-charcoal">
+      <img src="/favicon.svg" alt="" width="22" height="22" />
+      Numena
     </a>
-    <nav aria-label="Brand documents" class="-mx-1 min-w-0">
-      <ul
-        class="flex items-center gap-1 overflow-x-auto text-sm font-medium text-charcoal/70"
-      >
-        {
-          nav.map((item) => {
-            const isCurrent = current === item.href;
-            return (
-              <li class="shrink-0">
+
+    <a
+      href="/"
+      class:list={[
+        "rounded-full px-3 py-1.5 text-sm transition-colors hover:bg-pale-lavender hover:text-deep-purple",
+        current === "" && "bg-pale-lavender text-deep-purple",
+      ]}
+    >
+      Overview
+    </a>
+
+    {
+      sections.map((section) => (
+        <details class="doc-menu">
+          <summary
+            class:list={[
+              "cursor-pointer list-none rounded-full px-3 py-1.5 text-sm transition-colors hover:bg-pale-lavender hover:text-deep-purple",
+              current.startsWith(section.id) && "bg-pale-lavender text-deep-purple",
+            ]}
+          >
+            {section.name}
+          </summary>
+          <ul class="doc-menu-panel">
+            {section.items.map((doc) => (
+              <li>
                 <a
-                  href={item.href}
-                  aria-current={isCurrent ? "page" : undefined}
+                  href={`/${doc.path}`}
                   class:list={[
-                    "block whitespace-nowrap rounded-full px-3 py-1.5 transition-colors hover:bg-pale-lavender hover:text-deep-purple",
-                    isCurrent && "bg-pale-lavender text-deep-purple",
+                    "block rounded-lg px-3 py-1.5 text-sm text-charcoal/80 hover:bg-pale-lavender hover:text-deep-purple",
+                    current === doc.path && "bg-pale-lavender text-deep-purple",
                   ]}
                 >
-                  {item.title}
+                  {doc.title}
                 </a>
               </li>
-            );
-          })
-        }
-      </ul>
-    </nav>
+            ))}
+          </ul>
+        </details>
+      ))
+    }
   </div>
 </header>

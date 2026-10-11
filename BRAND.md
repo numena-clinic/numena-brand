@@ -1,69 +1,58 @@
-# Numena: Brand Guide
+# Numena Brand Guide
 
-The whole brand on one page. This is a **summary**: every claim below is owned by a document in [`brand/`](brand), and where this page and a source differ, the source wins. Follow the links for the reasoning.
+The whole brand on one page. This is a **summary**: every claim below is owned by a document in [`docs/`](docs), and where this page and a source differ, the source wins. Follow the links for the reasoning.
 
-## Identity
+## The idea
 
-- **Name:** Numena — short, easy to say, not a clinical term.
-- **Descriptor:** A thoughtful space for better clinical reasoning.
-- **Brand idea:** A thoughtful space for better clinical reasoning. "Better" means more examined — not faster, more automated, or more certain.
-- **Core claim:** Numena connects what you observe to what you conclude, and shows the path between them.
+- **Central idea:** Better thinking, made visible.
+- **Belief:** Good work depends on the quality of the thinking behind it.
+- **Promise:** Make complex thinking easier to see.
+- **Guiding principle:** Make thinking visible without pretending it is certain.
+- **Personality:** thoughtful, clear, calm, respectful, discerning.
 
-Source: [Foundation](brand/foundation.md).
+Source: [Brand Foundation](docs/brand-strategy/brand-foundation.md).
 
-## The boundary
+## Positioning
 
-Numena supports professional judgment; it does not replace it. This is brand, not a disclaimer.
+- **Category:** Professional practice platform for psychologists.
+- **Audience:** Psychologists working with complex, evolving clinical information.
+- **Problem:** Maintaining context and examining interpretations over time.
+- **Differentiation:** Connected context, open interpretation, and professional agency.
+- **Value proposition:** A more structured way to work through complexity without surrendering nuance or professional judgment.
+- **Core positioning idea:** Numena gives professional judgment a place to work.
 
-- The clinician is always the author of every conclusion.
-- Verbs describe what the clinician does: link, revise, decide.
-- Neither color nor icons deliver a verdict — no "good", "bad", "at risk", or "confirmed".
+Source: [Positioning](docs/brand-strategy/positioning.md). This is intended direction, not validated positioning — the document lists the hypotheses still to be tested.
 
-Source: [Foundation](brand/foundation.md).
+## Messaging and voice
 
-## Positioning and audience
+- **Product description:** A professional practice platform for psychologists working with complex clinical information.
+- **Core message:** Make complex clinical thinking easier to see.
+- **Voice:** thoughtful, clear, calm, respectful, discerning — consistent in voice, varying in tone by context.
+- **Avoid:** hype, unsupported certainty, unwarranted clinical authority, and empty technology claims.
 
-- **Audience:** psychologists who want to examine their clinical reasoning over time. Their problem is not missing notes; it is that the reasoning behind a formulation is hard to see, check, and revisit.
-- **Differentiator: traceability.** Select a theme, see the source material and the reasoning behind it. This is the claim to verify hardest, and the only promise the product should make.
+Source: [Messaging and Verbal Identity](docs/brand-strategy/messaging.md).
 
-**Open:** the category and the positioning statement have two unreconciled framings ("reasoning workspace" vs "psychology platform"). Decide before either is used externally. Source: [Foundation](brand/foundation.md#open-decisions).
+## Visual identity
 
-## Voice
+**Color:** a violet-led palette of ten colors — the foundation establishes the identity, vibrant accents add selective emphasis, and soft tints extend the palette.
 
-Four principles, in order of weight: **thoughtful, human, rigorous, quietly confident**.
-
-- Thoughtful — make room for nuance; precision over cleverness; let the reader connect the dots.
-- Human — speak one-to-one (*you*, *we*); never reduce psychologists to users or clients to data.
-- Rigorous — say what we know; don't hide uncertainty.
-- Quietly confident — clear statements over slogans; no hype; restraint.
-
-Avoid: `leverage`, `optimize workflows`, `unlock insights`, `drive efficiency`, `empower practitioners`, `next-generation`, `AI-powered`.
-
-Source: [Voice](brand/voice.md).
-
-## Visual system
-
-**Restraint.** Surfaces do the work — white for reading, lavender for rest. Bright color is a signal, never decoration; at most one bright accent per component.
-
-| Color | Hex | Job |
+| Color | Hex | Role |
 | --- | --- | --- |
-| Deep purple | #462279 | Identity and primary action |
-| Pale lavender | #EBE7F0 | Space and rest |
-| Soft peach | #F39D72 | Warmth (human-centered moments only) |
-| Bright cyan | #47DDF3 | Connection, trace to source |
-| Bright lilac | #AE6DF0 | Current focus |
+| Deep Purple | #4C207F | Primary brand color |
+| Ink Plum | #221A2A | Dark neutral for readable text and depth |
+| Pale Lavender | #EEE9F3 | Primary tinted surface |
+| White | #FFFFFF | Neutral surface and visual space |
+| Vibrant Purple | #8E36F4 | Primary expressive accent |
+| Vibrant Cyan | #25E4F8 | Cool supporting accent |
+| Vibrant Tangerine | #F57A44 | Warm supporting accent |
+| Soft Purple | #E8D7FD | Light violet variation |
+| Soft Cyan | #D3FAFE | Light cool variation |
+| Soft Tangerine | #FDE4DA | Light warm variation |
 
-- **Type:** Tiempos Text (Bold) for H1–H3; Albert Sans for everything else. Sentence case; nothing below 12 px.
-- **Icons:** Iconoir regular outline only, four sizes (16/20/24/32 px), pinned to a version. Icons never deliver a verdict.
-- **Spacing:** a 4 px grid; space above a heading is at least twice the space below.
+**Type:** two typefaces with distinct roles — **Tiempos Text** (Klim Type Foundry) for editorial character, **Albert Sans** (Google Fonts) for everything functional.
 
-Sources: [Visual language](brand/visual-language.md), [Color](brand/color.md), [Typography](brand/typography.md), [Iconography](brand/iconography.md).
+Sources: [Color System](docs/visual-identity/color.md), [Typography](docs/visual-identity/typography.md), [Logo System](docs/visual-identity/logo-system.md), [Imagery](docs/visual-identity/imagery.md), [Layout](docs/visual-identity/layout.md).
 
-## Where things live
+## Status
 
-- `brand/foundation.md` — strategy: purpose, idea, philosophy, positioning, boundary, messaging.
-- `brand/voice.md` — verbal identity.
-- `brand/visual-language.md` — how the visual system is applied.
-- `brand/logo.md`, `brand/color.md`, `brand/typography.md`, `brand/iconography.md` — the specs.
-
-Open questions are listed in [Foundation § Open decisions](brand/foundation.md#open-decisions) and inline in each spec.
+The documents describe intended direction. The category, differentiation, benefits, and the visual identity are proposed, pending validation — each document states its own open questions rather than settled guidance.

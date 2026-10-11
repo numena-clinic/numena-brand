@@ -1,37 +1,32 @@
-# Numena: Brand
+# Numena Brand
 
-The brand identity, voice, and visual system for Numena — written as a small set of Markdown documents, each with one responsibility.
+The brand for Numena — its strategy and visual identity — written as a small set of Markdown documents and rendered by a static site.
 
 This repository is the **brand**. It is not the product's component library; that is the future `numena-design-system`, which will consume these documents rather than restate them. See [ARCHITECTURE.md](ARCHITECTURE.md).
 
 ## Start here
 
-- **[brand/foundation.md](brand/foundation.md)** — the strategy everything else follows from. Read it first.
-- **[BRAND.md](BRAND.md)** — the whole brand on one page, with links to the source for every claim.
-- **[manifest.json](manifest.json)** — machine-readable index: every document, its status, and its dependencies.
+- **[docs/README.md](docs/README.md)** — the index of the documentation: the two areas and how they relate.
+- **[BRAND.md](BRAND.md)** — the whole brand on one page, linking to the source for every claim.
+- **[ARCHITECTURE.md](ARCHITECTURE.md)** — how the repository is organized.
 - **[AGENTS.md](AGENTS.md)** — how an AI agent should read and change this repository.
 
-## Documents
+## The documentation (`docs/`)
 
-The brand lives in [`brand/`](brand). Each document declares its `status` (`draft`, `in-review`, `approved`), a one-line `summary`, what it `dependsOn`, and what it `informs`.
+The brand lives in [`docs/`](docs), organized into two complementary areas. Each area has a `README.md` index; each document owns one subject.
 
-| Document | Covers |
-| --- | --- |
-| [Foundation](brand/foundation.md) | Purpose, brand idea, philosophy, positioning, audience, the boundary, messaging |
-| [Voice](brand/voice.md) | How Numena writes and speaks |
-| [Visual language](brand/visual-language.md) | Restraint, surfaces, accent roles, spacing, composition |
-| [Logo](brand/logo.md) | Marks, lockups, color specs, clear space, usage |
-| [Color](brand/color.md) | Palette, meaning, proportion, accessibility |
-| [Typography](brand/typography.md) | Typefaces, scale, hierarchy, spacing, accessibility |
-| [Iconography](brand/iconography.md) | Role, specs, sizes, states, core icon set |
+| Area | Document | Covers |
+| --- | --- | --- |
+| **Brand strategy** — the intent | [Positioning](docs/brand-strategy/positioning.md) | Category, audience, problem, differentiation, value proposition |
+| | [Brand Foundation](docs/brand-strategy/brand-foundation.md) | Central idea, beliefs, promise, guiding principle, personality |
+| | [Messaging and Verbal Identity](docs/brand-strategy/messaging.md) | Product description, messages, voice, tone, vocabulary |
+| **Visual identity** — the expression of intent | [Color System](docs/visual-identity/color.md) | Palette, roles, hierarchy, accessibility |
+| | [Typography](docs/visual-identity/typography.md) | Typefaces, their roles, typographic hierarchy |
+| | [Logo System](docs/visual-identity/logo-system.md) | Logo assets, variations, application rules |
+| | [Imagery](docs/visual-identity/imagery.md) | Principles for photography, illustration, abstract imagery |
+| | [Layout](docs/visual-identity/layout.md) | Composition, spacing, alignment, hierarchy, balance |
 
-Documents marked **draft** are in progress; open questions are flagged inline rather than silently decided. There are no placeholder documents.
-
-Validate front matter, the dependency graph, and links, and regenerate the index:
-
-```sh
-node scripts/build-manifest.mjs
-```
+The documents describe intended direction, not validated outcomes — hypotheses and unresolved questions are stated explicitly rather than decided.
 
 ## Assets (`assets/`)
 
@@ -39,7 +34,7 @@ Logo, imagery, and illustrations, committed and owned by Numena. Fonts (`assets/
 
 ## Site (`web/`)
 
-A static Astro + Tailwind + MDX site that renders the documents above — it reads `manifest.json` for navigation and the `brand/*.md` sources for content, so nothing is authored twice:
+A static Astro + Tailwind + MDX site that renders the documents in `docs/`, so nothing is authored twice:
 
 ```sh
 cd web

@@ -231,3 +231,39 @@
   left: 0;
   top: 0;
 }
+
+/* Header contents menu — a native <details> disclosure. */
+.doc-menu {
+  position: relative;
+}
+
+.doc-menu > summary {
+  list-style: none;
+}
+
+.doc-menu > summary::-webkit-details-marker {
+  display: none;
+}
+
+.doc-menu > summary::after {
+  content: " ▾";
+  font-size: 0.7em;
+  opacity: 0.6;
+}
+
+.doc-menu[open] > summary::after {
+  content: " ▴";
+}
+
+.doc-menu-panel {
+  position: absolute;
+  left: 0;
+  top: calc(100% + 0.4rem);
+  z-index: 50;
+  min-width: 14rem;
+  padding: 0.4rem;
+  background: #fff;
+  border: 1px solid var(--color-pale-lavender);
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(43, 43, 51, 0.12);
+}

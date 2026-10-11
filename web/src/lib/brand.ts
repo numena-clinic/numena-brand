@@ -1,105 +1,97 @@
-import { readFileSync, readdirSync } from "node:fs";
-import { resolve, basename, join } from "node:path";
+import { readFileSync, readdirSync, existsSync } from "node:fs";
+import { resolve, join, basename } from "node:path";
 import { marked } from "marked";
 
-// The repository root, one level above web/. brand/ documents, BRAND.md and
-// manifest.json are the single source of truth; this module only reads them.
+// The repository root, one level above web/. docs/ is the source of truth;
+// this module only reads it.
 const root = resolve(process.cwd(), "..");
-const brandDir = resolve(root, "brand");
+const docsDir = resolve(root, "docs");
 
-export interface BrandDoc {
-  id: string;
+export interface DocItem {
+  sectionId: string;
+  sectionName: string;
+  slug: string;
   path: string;
   title: string;
-  status: "draft" | "in-review" | "approved";
-  summary: string;
-  dependsOn: string[];
-  informs: string[];
   html: string;
 }
 
-interface Manifest {
+export interface Section {
+  id: string;
   name: string;
-  description: string;
-  documents: Array<Omit<BrandDoc, "html">>;
+  items: DocItem[];
 }
 
-function readManifest(): Manifest {
-  return JSON.parse(readFileSync(resolve(root, "manifest.json"), "utf8")) as Manifest;
+function titleize(name: string): string {
+  return name
+    .replace(/[-_]/g, " ")
+    .replace(/\b\w/g, (char) => char.toUpperCase());
 }
 
-// Locate every document by its id, wherever it sits under brand/ — the folder
-// layout is free to change; the manifest stays the index.
-function docFileIndex(): Map<string, string> {
-  const index = new Map<string, string>();
-  const walk = (dir: string) => {
-    for (const entry of readdirSync(dir, { withFileTypes: true })) {
-      const full = join(dir, entry.name);
-      if (entry.isDirectory()) walk(full);
-      else if (entry.name.endsWith(".md")) index.set(basename(entry.name, ".md"), full);
-    }
-  };
-  walk(brandDir);
-  return index;
-}
-
-// Drop the YAML front matter block; the manifest already carries the metadata.
+// Drop the YAML front matter block; it is optional and not shown in the body.
 function stripFrontMatter(markdown: string): string {
   return markdown.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n?/, "");
 }
 
-// The documents link to one another with relative Markdown paths (color.md,
-// brand/foundation.md, ../branding/foundation.md …). Rewrite any link whose
-// target is a brand document to its site route, keeping any #fragment.
-function rewriteLinks(html: string, ids: Set<string>): string {
-  return html.replace(/(<a\s[^>]*href=")([^"]+)(")/g, (_m, pre, href, post) => {
-    if (/^[a-z][a-z0-9+.-]*:/i.test(href) || href.startsWith("#")) return pre + href + post;
-    const [path, fragment] = href.split("#");
-    const target = basename(path.trim(), ".md");
-    if (!ids.has(target)) return pre + href + post;
-    return pre + `/${target}` + (fragment ? `#${fragment}` : "") + post;
+function frontmatter(markdown: string): Record<string, string> {
+  const match = markdown.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+  if (!match) return {};
+  const data: Record<string, string> = {};
+  for (const line of match[1].split(/\r?\n/)) {
+    const kv = line.match(/^([A-Za-z0-9_-]+):\s*(.*)$/);
+    if (kv) data[kv[1]] = kv[2].trim();
+  }
+  return data;
+}
+
+function render(markdown: string): string {
+  return marked.parse(stripFrontMatter(markdown), { async: false }) as string;
+}
+
+function sectionDirs(): string[] {
+  if (!existsSync(docsDir)) return [];
+  return readdirSync(docsDir, { withFileTypes: true })
+    .filter((entry) => entry.isDirectory() && !entry.name.startsWith("."))
+    .map((entry) => entry.name)
+    .sort();
+}
+
+export function getSections(): Section[] {
+  return sectionDirs().map((id) => {
+    const items: DocItem[] = readdirSync(join(docsDir, id))
+      .filter((file) => file.endsWith(".md") && file.toLowerCase() !== "readme.md")
+      .sort()
+      .map((file) => {
+        const markdown = readFileSync(join(docsDir, id, file), "utf8");
+        const fm = frontmatter(markdown);
+        const slug = basename(file, ".md");
+        return {
+          sectionId: id,
+          sectionName: titleize(id),
+          slug,
+          path: `${id}/${slug}`,
+          title: fm.title || titleize(slug),
+          html: render(markdown),
+        };
+      });
+    return { id, name: titleize(id), items };
   });
 }
 
-function render(markdown: string, ids: Set<string>): string {
-  return rewriteLinks(marked.parse(markdown, { async: false }) as string, ids);
+export function getDocs(): DocItem[] {
+  return getSections().flatMap((section) => section.items);
 }
 
-export function getDocs(): BrandDoc[] {
-  const manifest = readManifest();
-  const files = docFileIndex();
-  const ids = new Set(manifest.documents.map((doc) => doc.id));
-  return manifest.documents.map((doc) => {
-    const file = files.get(doc.id);
-    if (!file) throw new Error(`brand document not found for id "${doc.id}"`);
-    return { ...doc, html: render(stripFrontMatter(readFileSync(file, "utf8")), ids) };
-  });
+export function getDoc(path: string): DocItem | undefined {
+  return getDocs().find((doc) => doc.path === path);
 }
 
-export function getDoc(id: string): BrandDoc | undefined {
-  return getDocs().find((doc) => doc.id === id);
-}
-
-export function getBrandSummaryHtml(): string {
-  const ids = new Set(readManifest().documents.map((doc) => doc.id));
-  const markdown = readFileSync(resolve(root, "BRAND.md"), "utf8");
-  return render(stripFrontMatter(markdown), ids);
+export function getHomeHtml(): string {
+  const readme = resolve(docsDir, "README.md");
+  if (!existsSync(readme)) return "";
+  return render(readFileSync(readme, "utf8"));
 }
 
 export function getSiteName(): string {
-  return readManifest().name;
-}
-
-export interface NavItem {
-  id: string;
-  title: string;
-  href: string;
-}
-
-export function getNav(): NavItem[] {
-  return readManifest().documents.map((doc) => ({
-    id: doc.id,
-    title: doc.title,
-    href: `/${doc.id}`,
-  }));
+  return "Numena: Brand";
 }

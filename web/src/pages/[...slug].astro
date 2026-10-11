@@ -1,0 +1,32 @@
+---
+import { getDocs } from "../lib/brand";
+import DocLayout from "../layouts/DocLayout.astro";
+
+export function getStaticPaths() {
+  return getDocs().map((doc) => ({ params: { slug: doc.path }, props: { doc } }));
+}
+
+const { doc } = Astro.props;
+---
+
+<DocLayout title={doc.title}>
+  <article class="mx-auto max-w-3xl px-5 py-12 sm:px-8">
+    <p class="mb-4 text-xs font-medium uppercase tracking-widest text-bright-lilac">
+      {doc.sectionName}
+    </p>
+    {
+      doc.html.trim() ? (
+        <div class="prose" set:html={doc.html} />
+      ) : (
+        <>
+          <h1 class="font-serif text-3xl font-bold tracking-tight text-charcoal sm:text-4xl">
+            {doc.title}
+          </h1>
+          <p class="mt-4 text-charcoal/40">
+            This document has not been written yet.
+          </p>
+        </>
+      )
+    }
+  </article>
+</DocLayout>
