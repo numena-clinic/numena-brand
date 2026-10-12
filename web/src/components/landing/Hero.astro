@@ -1,0 +1,42 @@
+---
+import Wrapper from "../Wrapper.astro";
+import Text from "../Text.astro";
+import WatercolorCanvas from "./WatercolorCanvas.astro";
+---
+
+<section
+  class="relative flex min-h-[80vh] items-center overflow-hidden bg-deep-purple text-white"
+>
+  <WatercolorCanvas />
+
+  <Wrapper class="relative z-10 py-16 md:py-20">
+    <Text variant="displayHero" class="max-w-5xl text-white" data-reveal>
+      Better thinking,<br />made visible.
+    </Text>
+
+    <Text
+      variant="lead"
+      class="mt-6 max-w-2xl text-white/70"
+      data-reveal
+      data-reveal-delay="120"
+    >
+      A professional practice platform for psychologists working with complex
+      clinical information.
+    </Text>
+
+    <div class="mt-8 flex flex-wrap gap-3">
+      <a
+        href="/brand-strategy/"
+        class="inline-flex min-h-11 items-center rounded-full bg-white px-5 text-[0.6875rem] font-semibold uppercase tracking-[0.16em] text-deep-purple outline-none transition-colors hover:bg-pale-lavender focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+      >
+        Read the brand strategy
+      </a>
+      <a
+        href="/visual-identity/"
+        class="inline-flex min-h-11 items-center rounded-full border border-white/30 px-5 text-[0.6875rem] font-medium uppercase tracking-[0.16em] text-white outline-none transition-colors hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+      >
+        Explore the visual identity
+      </a>
+    </div>
+  </Wrapper>
+</section>

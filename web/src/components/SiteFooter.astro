@@ -1,23 +1,70 @@
 ---
-import { getSiteName } from "../lib/brand";
-const siteName = getSiteName();
+import Wrapper from "./Wrapper.astro";
+
+const links = [
+  { label: "Overview", href: "/" },
+  { label: "Brand Strategy", href: "/brand-strategy/" },
+  { label: "Visual Identity", href: "/visual-identity/" },
+];
 ---
 
-<footer class="mt-24 border-t border-pale-lavender bg-pale-lavender/30">
-  <div
-    class="mx-auto flex max-w-5xl flex-col gap-2 px-5 py-8 text-sm text-ink-plum/70 sm:px-8"
-  >
-    <p>
-      {siteName} — every page is rendered from the source documents in
-      <a
-        class="text-deep-purple underline underline-offset-4"
-        href="https://github.com/numena-clinic/numena-brand/tree/main/docs"
-        >docs/</a
-      >. Where this site and a source differ, the source wins.
-    </p>
-    <p class="text-ink-plum/50">
-      Logos © Numena. Web type: Tiempos (Klim, licensed, not redistributed) and
-      Albert Sans (SIL OFL 1.1).
-    </p>
-  </div>
+<footer class="border-t border-ink-plum bg-ink-plum text-white">
+  <Wrapper class="py-14 md:py-20">
+    <div class="grid gap-12 md:grid-cols-12">
+      <div class="md:col-span-6">
+        <img
+          src="/assets/logo/logo-wordmark-white.svg"
+          alt="Numena"
+          class="h-auto w-[120px]"
+        />
+        <p class="mt-6 max-w-sm text-sm leading-relaxed text-white/60">
+          The brand system for a professional practice platform for
+          psychologists: strategy, voice, and visual identity.
+        </p>
+      </div>
+
+      <div class="md:col-span-3">
+        <p class="text-[0.6875rem] font-medium uppercase tracking-[0.18em] text-white/50">
+          Guide
+        </p>
+        <ul class="mt-4 space-y-2">
+          {
+            links.map((link) => (
+              <li>
+                <a
+                  href={link.href}
+                  class="text-sm text-white/80 outline-none transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+
+      <div class="md:col-span-3">
+        <p class="text-[0.6875rem] font-medium uppercase tracking-[0.18em] text-white/50">
+          Sources
+        </p>
+        <p class="mt-4 text-sm leading-relaxed text-white/60">
+          Every page is rendered from the Markdown in
+          <a
+            href="https://github.com/numena-clinic/numena-brand"
+            class="text-white/80 underline decoration-white/30 underline-offset-4 outline-none hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+            >docs/</a
+          >. Where the site and a document differ, the document wins.
+        </p>
+      </div>
+    </div>
+
+    <div
+      class="mt-14 flex flex-col gap-3 border-t border-white/15 pt-6 text-xs text-white/45 sm:flex-row sm:items-center sm:justify-between"
+    >
+      <p>© {new Date().getFullYear()} Numena. All rights reserved.</p>
+      <p>
+        Web type: Tiempos (Klim, licensed) and Albert Sans (SIL OFL 1.1).
+      </p>
+    </div>
+  </Wrapper>
 </footer>

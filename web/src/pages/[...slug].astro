@@ -1,6 +1,6 @@
 ---
 import { getDocs } from "../lib/brand";
-import DocLayout from "../layouts/DocLayout.astro";
+import DocsLayout from "../layouts/DocsLayout.astro";
 
 export function getStaticPaths() {
   return getDocs().map((doc) => ({ params: { slug: doc.path }, props: { doc } }));
@@ -9,24 +9,12 @@ export function getStaticPaths() {
 const { doc } = Astro.props;
 ---
 
-<DocLayout title={doc.title}>
-  <article class="mx-auto max-w-3xl px-5 py-12 sm:px-8">
-    <p class="mb-4 text-xs font-medium uppercase tracking-widest text-vibrant-purple">
-      {doc.sectionName}
-    </p>
-    {
-      doc.html.trim() ? (
-        <div class="prose" set:html={doc.html} />
-      ) : (
-        <>
-          <h1 class="font-serif text-3xl font-bold tracking-tight text-ink-plum sm:text-4xl">
-            {doc.title}
-          </h1>
-          <p class="mt-4 text-ink-plum/40">
-            This document has not been written yet.
-          </p>
-        </>
-      )
-    }
-  </article>
-</DocLayout>
+<DocsLayout
+  title={doc.title}
+  current={doc.path}
+  sectionId={doc.sectionId}
+  sectionName={doc.sectionName}
+  docTitle={doc.title}
+>
+  <article class="prose" set:html={doc.html} />
+</DocsLayout>

@@ -39,8 +39,7 @@
 
   :focus-visible {
     outline: 2px solid var(--color-vibrant-purple);
-  outline-offset: 2px;
-    box-shadow: 0 0 0 5px rgba(34, 26, 42, 0.85);
+    outline-offset: 2px;
     border-radius: 2px;
   }
 
@@ -216,6 +215,78 @@
   }
 }
 
+.prose .swatch-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 14px;
+  margin: 1.5rem 0;
+}
+
+.prose .swatch {
+  border: 1px solid var(--color-pale-lavender);
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.prose .swatch-color {
+  height: 88px;
+  box-shadow: inset 0 0 0 1px rgba(34, 26, 42, 0.06);
+}
+
+.prose .swatch-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 12px 14px 14px;
+}
+
+.prose .swatch-name {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  color: var(--color-ink-plum);
+}
+
+.prose .swatch-hex {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.78em;
+  letter-spacing: 0.02em;
+  color: var(--color-deep-purple);
+}
+
+.prose .swatch-role {
+  font-size: 0.8em;
+  line-height: 1.45;
+  color: rgba(34, 26, 42, 0.62);
+}
+
+.prose .bento {
+  columns: 3;
+  column-gap: 14px;
+  margin: 1.6rem 0;
+}
+
+.prose .bento img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 0 14px;
+  border-radius: 14px;
+  break-inside: avoid;
+}
+
+@media (max-width: 860px) {
+  .prose .bento {
+    columns: 2;
+  }
+}
+
+@media (max-width: 560px) {
+  .prose .bento {
+    columns: 1;
+  }
+}
+
 .prose img {
   max-width: 100%;
   height: auto;
@@ -240,38 +311,49 @@
   top: 0;
 }
 
-/* Header contents menu — a native <details> disclosure. */
-.doc-menu {
-  position: relative;
+/* Reveal-on-scroll. The `reveal` class is added by script, so content stays
+   visible when JavaScript is unavailable. */
+.reveal {
+  opacity: 0;
+  transform: translateY(1.5rem);
+  transition:
+    opacity 700ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 700ms cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: var(--reveal-delay, 0ms);
 }
 
-.doc-menu > summary {
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Native <details> disclosure used by the docs sidebar on small screens. */
+.disclosure > summary {
   list-style: none;
 }
 
-.doc-menu > summary::-webkit-details-marker {
+.disclosure > summary::-webkit-details-marker {
   display: none;
 }
 
-.doc-menu > summary::after {
-  content: " ▾";
-  font-size: 0.7em;
-  opacity: 0.6;
+.disclosure > summary::after {
+  content: "";
+  width: 0.5rem;
+  height: 0.5rem;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(45deg);
+  transition: transform 200ms ease;
 }
 
-.doc-menu[open] > summary::after {
-  content: " ▴";
-}
-
-.doc-menu-panel {
-  position: absolute;
-  left: 0;
-  top: calc(100% + 0.4rem);
-  z-index: 50;
-  min-width: 14rem;
-  padding: 0.4rem;
-  background: #fff;
-  border: 1px solid var(--color-pale-lavender);
-  border-radius: 12px;
-  box-shadow: 0 12px 30px rgba(34, 26, 42, 0.12);
+.disclosure[open] > summary::after {
+  transform: rotate(-135deg);
 }

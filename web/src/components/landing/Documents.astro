@@ -1,0 +1,73 @@
+---
+import Wrapper from "../Wrapper.astro";
+import Text from "../Text.astro";
+import { getManifest } from "../../lib/brand";
+
+const areas = getManifest();
+---
+
+<section id="documents" class="bg-pale-lavender">
+  <Wrapper class="py-20 md:py-28">
+    <div class="flex items-start justify-between gap-6">
+      <div class="flex items-baseline gap-4">
+        <Text variant="meta" class="text-vibrant-purple">06</Text>
+        <Text variant="meta" class="text-ink-plum/50">Documents</Text>
+      </div>
+      <Text variant="meta" class="hidden text-right text-ink-plum/40 sm:block">
+        The full brand guide
+      </Text>
+    </div>
+
+    <Text variant="display" class="mt-14 max-w-4xl md:mt-20" data-reveal>
+      The intent, and <span class="text-vibrant-purple">its expression.</span>
+    </Text>
+
+    <p class="mt-6 max-w-2xl text-base leading-relaxed text-ink-plum/65">
+      Every page in this guide is the document itself, rendered from the
+      Markdown in <code class="rounded bg-white/70 px-1.5 py-0.5 text-sm"
+        >docs/</code
+      >. Open a section to read it in full.
+    </p>
+
+    <div class="mt-16 space-y-14 md:mt-20">
+      {
+        areas.map((area) => (
+          <div>
+            <div class="flex flex-wrap items-baseline justify-between gap-2 border-b border-ink-plum/15 pb-4">
+              <h3 class="font-serif text-2xl font-bold text-ink-plum">
+                {area.title}
+              </h3>
+              {area.role && (
+                <Text variant="meta" class="text-ink-plum/40">
+                  {area.role}
+                </Text>
+              )}
+            </div>
+            <ul class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {area.documents.map((doc) => (
+                <li>
+                  <a
+                    href={doc.href}
+                    class="flex h-full flex-col rounded-2xl border border-ink-plum/10 bg-white p-5 outline-none transition-colors hover:border-vibrant-purple/50 hover:bg-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-vibrant-purple"
+                  >
+                    <span class="font-serif text-lg font-bold text-ink-plum">
+                      {doc.title}
+                    </span>
+                    {doc.summary && (
+                      <span class="mt-2 text-sm leading-relaxed text-ink-plum/60">
+                        {doc.summary}
+                      </span>
+                    )}
+                    <span class="mt-auto pt-4 text-[0.6875rem] font-medium uppercase tracking-[0.18em] text-deep-purple">
+                      Read ↗
+                    </span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
+    </div>
+  </Wrapper>
+</section>

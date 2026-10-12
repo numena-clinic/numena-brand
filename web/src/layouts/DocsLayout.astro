@@ -1,0 +1,119 @@
+---
+import Layout from "./Layout.astro";
+import Wrapper from "../components/Wrapper.astro";
+import DocsNav from "../components/DocsNav.astro";
+import { getFlatDocs } from "../lib/brand";
+
+interface Props {
+  title: string;
+  /** The document path (e.g. `color`) or, on a section landing, the section id. */
+  current: string;
+  sectionId: string;
+  sectionName: string;
+  docTitle?: string;
+  description?: string;
+}
+
+const { title, current, sectionId, sectionName, docTitle, description } =
+  Astro.props;
+
+const flat = getFlatDocs();
+const index = flat.findIndex((doc) => doc.path === current);
+const prev = index > 0 ? flat[index - 1] : undefined;
+const next = index >= 0 && index < flat.length - 1 ? flat[index + 1] : undefined;
+---
+
+<Layout title={title} description={description}>
+  <Wrapper class="lg:grid lg:grid-cols-[16rem_minmax(0,1fr)] lg:gap-12 xl:gap-20">
+    <aside class="hidden lg:block">
+      <div
+        class="sticky top-24 max-h-[calc(100vh-7rem)] overflow-y-auto py-12 pr-2"
+      >
+        <DocsNav current={current} />
+      </div>
+    </aside>
+
+    <div class="min-w-0 py-10 lg:py-12">
+      <details
+        class="disclosure mb-8 rounded-xl border border-ink-plum/10 lg:hidden"
+      >
+        <summary
+          class="flex cursor-pointer items-center justify-between px-4 py-3 text-[0.6875rem] font-semibold uppercase tracking-[0.18em] text-ink-plum/60"
+        >
+          Brand guide
+        </summary>
+        <div class="border-t border-ink-plum/10 px-4 py-5">
+          <DocsNav current={current} label="Brand guide menu" />
+        </div>
+      </details>
+
+      <nav aria-label="Breadcrumb" class="mb-8">
+        <ol
+          class="flex flex-wrap items-center gap-x-2 gap-y-1 text-[0.6875rem] font-medium uppercase tracking-[0.18em] text-ink-plum/45"
+        >
+          <li><a class="transition-colors hover:text-deep-purple" href="/">Home</a></li>
+          <li aria-hidden="true">/</li>
+          <li>
+            <a
+              class="transition-colors hover:text-deep-purple"
+              href={`/${sectionId}/`}
+              aria-current={docTitle ? undefined : "page"}
+            >
+              {sectionName}
+            </a>
+          </li>
+          {
+            docTitle && (
+              <>
+                <li aria-hidden="true">/</li>
+                <li class="text-ink-plum" aria-current="page">
+                  {docTitle}
+                </li>
+              </>
+            )
+          }
+        </ol>
+      </nav>
+
+      <slot />
+
+      {
+        (prev || next) && (
+          <nav
+            aria-label="Documents"
+            class="mt-16 grid gap-4 border-t border-ink-plum/10 pt-8 sm:grid-cols-2"
+          >
+            {prev ? (
+              <a
+                href={`/${prev.path}`}
+                class="group rounded-xl border border-ink-plum/10 p-5 outline-none transition-colors hover:border-vibrant-purple/50 hover:bg-pale-lavender/40 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-vibrant-purple"
+              >
+                <span class="text-[0.6875rem] font-medium uppercase tracking-[0.18em] text-ink-plum/45">
+                  Previous
+                </span>
+                <span class="mt-1 block font-serif text-lg font-bold text-ink-plum">
+                  {prev.title}
+                </span>
+              </a>
+            ) : (
+              <span class="hidden sm:block" />
+            )}
+            {next ? (
+              <a
+                href={`/${next.path}`}
+                class="group rounded-xl border border-ink-plum/10 p-5 text-right outline-none transition-colors hover:border-vibrant-purple/50 hover:bg-pale-lavender/40 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-vibrant-purple sm:col-start-2"
+              >
+                <span class="text-[0.6875rem] font-medium uppercase tracking-[0.18em] text-ink-plum/45">
+                  Next
+                </span>
+                <span class="mt-1 block font-serif text-lg font-bold text-ink-plum">
+                  {next.title}
+                </span>
+              </a>
+            ) : null}
+          </nav>
+        )
+      }
+    </div>
+  </Wrapper>
+</Layout>

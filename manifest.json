@@ -40,7 +40,7 @@
           "id": "graphic-language",
           "path": "docs/visual-identity/graphic-language.md",
           "title": "Graphic Language",
-          "summary": "Defines how the visual elements behave together — the relationships among shape, color, typography, space, and composition."
+          "summary": "Defines how the visual elements behave together \u2014 the relationships among shape, color, typography, space, and composition."
         },
         {
           "id": "color",
@@ -77,6 +77,12 @@
           "path": "docs/visual-identity/layout.md",
           "title": "Layout",
           "summary": "The principles for composition, spacing, alignment, hierarchy, and visual balance."
+        },
+        {
+          "id": "motion-generative-patterns",
+          "path": "docs/visual-identity/motion-generative-patterns.md",
+          "title": "Motion & Generative Patterns",
+          "summary": "Watercolor-kaleidoscope motion and generative patterns, interaction principles, accessibility, and static fallbacks."
         }
       ]
     }

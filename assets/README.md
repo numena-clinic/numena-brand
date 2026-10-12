@@ -7,6 +7,7 @@ Binaries, source artwork, and the licensing rules for each. Third-party licensed
 | Path | In git | License / status |
 | --- | --- | --- |
 | `logo/` | yes | © Numena, all rights reserved. Original brand marks. |
+| `typography/` | yes | © Numena — internally created specimen images. The typefaces shown are licensed separately (see `fonts/`). |
 | `illustrations/` | yes | © Numena, all rights reserved. |
 | `images/` | yes | Original / produced for Numena. See [provenance](#images) note. |
 | `fonts/` | **no** | Commercial web fonts — see below. |

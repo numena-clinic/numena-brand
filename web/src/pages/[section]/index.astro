@@ -1,0 +1,21 @@
+---
+import { getSections, getSectionIndex } from "../../lib/brand";
+import DocsLayout from "../../layouts/DocsLayout.astro";
+
+export function getStaticPaths() {
+  return getSections().map((section) => ({ params: { section: section.id } }));
+}
+
+const { section } = Astro.params;
+const index = getSectionIndex(section!);
+---
+
+<DocsLayout
+  title={index?.name ?? "Docs"}
+  current={section!}
+  sectionId={section!}
+  sectionName={index?.name ?? "Docs"}
+  description={index ? `${index.name} — Numena brand guide.` : undefined}
+>
+  <article class="prose" set:html={index?.html ?? ""} />
+</DocsLayout>

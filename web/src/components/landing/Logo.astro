@@ -1,0 +1,76 @@
+---
+import Wrapper from "../Wrapper.astro";
+import Text from "../Text.astro";
+---
+
+<section
+  id="logo"
+  class="border-b border-ink-plum/10 bg-pale-lavender text-ink-plum"
+>
+  <Wrapper class="py-20 md:py-28">
+    <div class="flex items-start justify-between gap-6">
+      <div class="flex items-baseline gap-4">
+        <Text variant="meta" class="text-vibrant-purple">04</Text>
+        <Text variant="meta" class="text-ink-plum/50">Logo</Text>
+      </div>
+      <a
+        href="/visual-identity/logo-system"
+        class="text-[0.6875rem] font-medium uppercase tracking-[0.18em] text-deep-purple outline-none transition-opacity hover:opacity-70 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-vibrant-purple"
+      >
+        Open the logo system ↗
+      </a>
+    </div>
+
+    <Text variant="display" class="mt-14 max-w-4xl md:mt-20" data-reveal>
+      One mark, ready for <span class="text-vibrant-purple">every context.</span>
+    </Text>
+
+    <div
+      class="mt-16 grid grid-cols-1 gap-4 sm:grid-cols-[3fr_1fr] md:mt-20 md:gap-6"
+    >
+      <div
+        class="flex min-h-48 items-center justify-center rounded-2xl border border-ink-plum/10 bg-white p-6 sm:min-h-0 md:p-10"
+      >
+        <img
+          src="/assets/logo/logo-primary.svg"
+          alt="Numena primary logo"
+          class="h-9 w-auto md:h-16"
+          loading="lazy"
+        />
+      </div>
+
+      <div
+        class="flex aspect-square items-center justify-center rounded-2xl bg-deep-purple p-6 md:p-10"
+      >
+        <img
+          src="/assets/logo/logo-symbol-white.svg"
+          alt="Numena symbol reversed"
+          class="h-14 w-auto md:h-20"
+          loading="lazy"
+        />
+      </div>
+
+      <div
+        class="flex min-h-48 items-center justify-center rounded-2xl bg-deep-purple p-6 sm:min-h-0 md:p-10"
+      >
+        <img
+          src="/assets/logo/logo-light.svg"
+          alt="Numena light logo"
+          class="h-9 w-auto md:h-16"
+          loading="lazy"
+        />
+      </div>
+
+      <div
+        class="flex aspect-square items-center justify-center rounded-2xl border border-ink-plum/10 bg-white p-6 md:p-10"
+      >
+        <img
+          src="/assets/logo/logo-symbol.svg"
+          alt="Numena symbol"
+          class="h-14 w-auto md:h-20"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </Wrapper>
+</section>

@@ -52,19 +52,15 @@ It should remain compatible with Numena’s evolving products and communications
 
 ## 4. Logo Assets
 
-This section is the visual reference for Numena’s approved logo artwork. Each image should display the corresponding asset directly from the brand repository.
-
-Replace the placeholder paths with the actual filenames when the assets are available.
+This section is the visual reference for Numena’s logo artwork. Each image shows the current asset from the brand repository, with its filename below.
 
 ### 4.1 Primary Logo
 
-The primary logo is the default representation of Numena. Use it whenever the available space and context allow it to appear clearly.
+The primary logo is the default representation of Numena. Use it whenever the available space and context allow it to appear clearly. The primary artwork is already the dark-on-light treatment, so it is the version to use on light backgrounds.
 
-![Numena primary logo — asset placeholder](../../assets/logo/logo-primary.svg)
+![Numena primary logo](../../assets/logo/logo-primary.svg)
 
 *Asset: `assets/logo/logo-primary.svg`*
-
-**Status:** Pending asset
 
 ### 4.2 Secondary Logo
 
@@ -72,11 +68,9 @@ A secondary logo may provide an alternative composition when the primary version
 
 Include this variant only if it solves a genuine application need.
 
-![Numena secondary logo — asset placeholder](../../assets/logo/logo-secondary.svg)
+![Numena secondary logo](../../assets/logo/logo-secondary.svg)
 
 *Asset: `assets/logo/logo-secondary.svg`*
-
-**Status:** Pending asset, if applicable
 
 ### 4.3 Standalone Symbol
 
@@ -84,11 +78,9 @@ The standalone symbol may be used when the full logo does not fit the available 
 
 It must remain identifiable independently of the wordmark at its intended display size.
 
-![Numena logo symbol — asset placeholder](../../assets/logo/logo-symbol.svg)
+![Numena logo symbol](../../assets/logo/logo-symbol.svg)
 
-*Asset: `assets/logo/logo-symbol.svg`*
-
-**Status:** Pending asset, if applicable
+*Asset: `assets/logo/logo-symbol.svg` — white version: `assets/logo/logo-symbol-white.svg`*
 
 ### 4.4 Wordmark
 
@@ -96,11 +88,9 @@ The wordmark is the typographic representation of the Numena name.
 
 It may be used independently when the context benefits from a textual identifier or when the symbol is unnecessary.
 
-![Numena wordmark — asset placeholder](../../assets/logo/logo-wordmark.svg)
+![Numena wordmark](../../assets/logo/logo-wordmark.svg)
 
-*Asset: `assets/logo/logo-wordmark.svg`*
-
-**Status:** Pending asset, if applicable
+*Asset: `assets/logo/logo-wordmark.svg` — white version: `assets/logo/logo-wordmark-white.svg`*
 
 ## 5. Color Variants
 
@@ -110,9 +100,9 @@ Only include variants that have been created and approved.
 
 ### 5.1 Primary Color Version
 
-The default approved color treatment for the logo.
+The default approved color treatment for the logo, on light backgrounds.
 
-![Numena primary color logo — asset placeholder](../../assets/logo/logo-primary.svg)
+![Numena primary color logo](../../assets/logo/logo-primary.svg)
 
 *Asset: `assets/logo/logo-primary.svg`*
 
@@ -120,25 +110,17 @@ The default approved color treatment for the logo.
 
 Designed for use on sufficiently dark backgrounds.
 
-![Numena light logo — asset placeholder](../../assets/logo/logo-light.svg)
+![Numena light logo](../../assets/logo/logo-light.svg)
 
 *Asset: `assets/logo/logo-light.svg`*
 
-### 5.3 Dark Version
-
-Designed for use on sufficiently light backgrounds.
-
-![Numena dark logo — asset placeholder](../../assets/logo/logo-dark.svg)
-
-*Asset: `assets/logo/logo-dark.svg`*
-
-### 5.4 Monochrome Version
+### 5.3 Monochrome Version
 
 Designed for applications requiring a single-color reproduction.
 
-![Numena monochrome logo — asset placeholder](../../assets/logo/logo-monochrome.svg)
+![Numena monochrome logo](../../assets/logo/logo-monochromatic.svg)
 
-*Asset: `assets/logo/logo-monochrome.svg`*
+*Asset: `assets/logo/logo-monochromatic.svg`*
 
 ### Color usage principles
 
@@ -161,8 +143,9 @@ Each logo variant should serve a defined purpose.
 | Symbol | Compact applications where the symbol remains recognizable |
 | Wordmark | Text-based brand identification |
 | Light version | Dark backgrounds |
-| Dark version | Light backgrounds |
 | Monochrome version | Single-color reproduction |
+
+The primary artwork is the dark-on-light treatment, so there is no separate dark version.
 
 Not every application requires every variant. Maintain only the variants that provide a practical benefit.
 
@@ -180,19 +163,17 @@ Minimum sizes should be established according to the legibility of each variant 
 
 **Clear-space reference**
 
-![Numena logo clear-space specification — placeholder](../../assets/logo/logo-clear-space.svg)
+![Numena logo clear-space specification](../../assets/logo/logo-clear-space.png)
 
-*Asset: `assets/logo/logo-clear-space.svg`*
+*Asset: `assets/logo/logo-clear-space.png`*
 
 **Minimum-size reference**
 
-![Numena logo minimum-size specification — placeholder](../../assets/logo/logo-minimum-size.svg)
+![Numena logo minimum-size specification](../../assets/logo/logo-minimum-size.png)
 
-*Asset: `assets/logo/logo-minimum-size.svg`*
+*Asset: `assets/logo/logo-minimum-size.png`*
 
-**Status:** Specifications pending final artwork and testing.
-
-Do not invent measurements before the logo geometry has been finalized.
+**Status:** The references above document the current artwork. Reconfirm the measurements against the final production files as the logo is finalized.
 
 ## 8. Backgrounds and Placement
 
@@ -228,35 +209,35 @@ The following examples illustrate treatments that should be avoided.
 
 ### 9.1 Distortion
 
-![Incorrect logo distortion — illustrative placeholder](../../assets/logo/examples/incorrect-distortion.svg)
+![Incorrect logo distortion](../../assets/logo/incorrect-logo-distortion.png) ![Incorrect usage](../../assets/logo/incorrect-cross.svg)
 
 Do not stretch, compress, or otherwise distort the logo.
 
 ### 9.2 Unapproved colors
 
-![Incorrect logo color usage — illustrative placeholder](../../assets/logo/examples/incorrect-color.svg)
+![Incorrect logo color usage](../../assets/logo/incorrect-logo-color.png) ![Incorrect usage](../../assets/logo/incorrect-cross.svg)
 
 Do not apply unapproved colors or combinations.
 
 ### 9.3 Effects and decoration
 
-![Incorrect logo effects — illustrative placeholder](../../assets/logo/examples/incorrect-effects.svg)
+![Incorrect logo effects](../../assets/logo/incorrect-logo-effects.png) ![Incorrect usage](../../assets/logo/incorrect-cross.svg)
 
 Do not add unapproved gradients, shadows, outlines, textures, or decorative elements.
 
 ### 9.4 Insufficient contrast
 
-![Incorrect logo contrast — illustrative placeholder](../../assets/logo/examples/incorrect-contrast.svg)
+![Incorrect logo contrast](../../assets/logo/incorrect-logo-contrast.png) ![Incorrect usage](../../assets/logo/incorrect-cross.svg)
 
 Do not place the logo on backgrounds that compromise its visibility.
 
 ### 9.5 Altered proportions
 
-![Incorrect logo proportions — illustrative placeholder](../../assets/logo/examples/incorrect-proportions.svg)
+![Incorrect logo proportions](../../assets/logo/incorrect-logo-proportions.png) ![Incorrect usage](../../assets/logo/incorrect-cross.svg)
 
 Do not change the proportions or relationships between the symbol and wordmark.
 
-**Note:** The images in this section are reserved for future examples. They should be created from the finalized logo artwork and clearly presented as incorrect-use demonstrations, not approved logo variants.
+**Note:** The red cross marks a treatment to avoid. These are incorrect-use demonstrations, not approved logo variants.
 
 ## 10. Application Across Touchpoints
 
@@ -282,7 +263,7 @@ The asset collection should distinguish finalized artwork from concepts, drafts,
 
 When the logo changes, update the approved files and related documentation together to prevent inconsistent versions from circulating.
 
-### Suggested asset structure
+### Asset structure
 
 ```text
 assets/
@@ -290,21 +271,22 @@ assets/
     ├── logo-primary.svg
     ├── logo-secondary.svg
     ├── logo-symbol.svg
+    ├── logo-symbol-white.svg
     ├── logo-wordmark.svg
+    ├── logo-wordmark-white.svg
     ├── logo-light.svg
-    ├── logo-dark.svg
-    ├── logo-monochrome.svg
-    ├── logo-clear-space.svg
-    ├── logo-minimum-size.svg
-    └── examples/
-        ├── incorrect-distortion.svg
-        ├── incorrect-color.svg
-        ├── incorrect-effects.svg
-        ├── incorrect-contrast.svg
-        └── incorrect-proportions.svg
+    ├── logo-monochromatic.svg
+    ├── logo-clear-space.png
+    ├── logo-minimum-size.png
+    ├── incorrect-cross.svg
+    ├── incorrect-logo-distortion.png
+    ├── incorrect-logo-color.png
+    ├── incorrect-logo-effects.png
+    ├── incorrect-logo-contrast.png
+    └── incorrect-logo-proportions.png
 ```
 
-This is a proposed structure, not a list of existing assets. Remove unused variants and specifications rather than maintaining empty files indefinitely.
+Keep this structure in sync with the files that exist. Remove unused variants and specifications rather than maintaining empty files indefinitely.
 
 ### Asset status
 

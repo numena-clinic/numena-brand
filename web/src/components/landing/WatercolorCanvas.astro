@@ -1,0 +1,34 @@
+---
+// Decorative, interactive watercolor layer. Renders above the hero background
+// and below the hero content; the parent must be `relative` and the content
+// above it. Purely presentational — it never receives pointer events.
+interface Props {
+  /** Optional overrides for any watercolor tunable (see lib/watercolor.ts). */
+  tunables?: Record<string, number | string[]>;
+}
+
+const { tunables } = Astro.props;
+---
+
+<canvas
+  data-watercolor
+  data-watercolor-config={tunables ? JSON.stringify(tunables) : undefined}
+  aria-hidden="true"
+  class="pointer-events-none absolute inset-0 z-0 h-full w-full"
+></canvas>
+
+<script>
+  import { initWatercolor } from "../../lib/watercolor";
+
+  for (const canvas of document.querySelectorAll<HTMLCanvasElement>(
+    "canvas[data-watercolor]",
+  )) {
+    const host = canvas.closest("section") ?? canvas.parentElement;
+    if (!host) continue;
+
+    const raw = canvas.dataset.watercolorConfig;
+    const overrides = raw ? JSON.parse(raw) : {};
+
+    initWatercolor(canvas, host as HTMLElement, overrides);
+  }
+</script>

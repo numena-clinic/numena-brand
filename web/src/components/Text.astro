@@ -1,0 +1,61 @@
+---
+import type { HTMLAttributes } from "astro/types";
+
+type Tag =
+  | "p"
+  | "a"
+  | "span"
+  | "small"
+  | "strong"
+  | "em"
+  | "blockquote"
+  | "h1"
+  | "h2"
+  | "h3"
+  | "h4";
+
+// Type roles follow docs/visual-identity/typography.md: Tiempos Text carries
+// editorial character, Albert Sans everything functional. "meta" labels and the
+// uppercase sans displays are the Swiss-style functional voice.
+type Variant =
+  | "meta"
+  | "body"
+  | "lead"
+  | "displayHero"
+  | "display"
+  | "displaySans"
+  | "quote";
+
+interface Props extends HTMLAttributes<"p"> {
+  tag?: Tag;
+  variant?: Variant;
+  href?: string;
+}
+
+const textStyles: Record<Variant, string> = {
+  meta: "font-sans text-[0.6875rem] font-medium uppercase tracking-[0.18em]",
+  body: "font-sans text-[0.9375rem] leading-relaxed text-pretty",
+  lead: "font-serif text-[1.0625rem] leading-relaxed text-pretty sm:text-[1.1875rem]",
+  displayHero:
+    "font-serif font-bold tracking-[-0.02em] leading-[1.02] text-balance text-[clamp(2.25rem,6.2vw,4.75rem)]",
+  display:
+    "font-serif font-bold tracking-[-0.015em] leading-[1.06] text-balance text-[clamp(1.75rem,4vw,3rem)]",
+  displaySans:
+    "font-sans font-bold uppercase tracking-[-0.03em] leading-[0.95] text-[clamp(2rem,5vw,3.75rem)]",
+  quote:
+    "font-serif text-[clamp(1.25rem,2.4vw,1.75rem)] leading-snug text-pretty",
+};
+
+const {
+  tag: Tag = "p",
+  variant = "body",
+  class: extraClass = "",
+  ...attributes
+} = Astro.props as Props;
+
+const classes = `${textStyles[variant]} ${extraClass}`.trim();
+---
+
+<Tag class={classes} {...attributes}>
+  <slot />
+</Tag>

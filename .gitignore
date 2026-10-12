@@ -3,4 +3,5 @@ assets/fonts/
 web/node_modules/
 web/dist/
 web/.astro/
+web/public/assets/
 *.woff2

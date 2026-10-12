@@ -1,0 +1,63 @@
+---
+import Wrapper from "../Wrapper.astro";
+import Text from "../Text.astro";
+
+const points = [
+  {
+    label: "Category",
+    text: "Professional practice platform for psychologists.",
+  },
+  {
+    label: "Audience",
+    text: "Psychologists working with complex, evolving clinical information.",
+  },
+  {
+    label: "Differentiation",
+    text: "Connected context, open interpretation, and professional agency.",
+  },
+];
+---
+
+<section id="positioning" class="border-b border-ink-plum/10 bg-white">
+  <Wrapper class="py-20 md:py-28">
+    <div class="flex items-start justify-between gap-6">
+      <div class="flex items-baseline gap-4">
+        <Text variant="meta" class="text-vibrant-purple">01</Text>
+        <Text variant="meta" class="text-ink-plum/50">Positioning</Text>
+      </div>
+      <a
+        href="/brand-strategy/positioning"
+        class="text-[0.6875rem] font-medium uppercase tracking-[0.18em] text-deep-purple outline-none transition-opacity hover:opacity-70 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-vibrant-purple"
+      >
+        Read the positioning document ↗
+      </a>
+    </div>
+
+    <Text
+      variant="display"
+      class="mt-14 max-w-4xl text-deep-purple md:mt-20"
+      data-reveal
+    >
+      Numena gives professional judgment <span class="text-vibrant-purple"
+        >a place to work.</span
+      >
+    </Text>
+
+    <div
+      class="mt-16 grid gap-px overflow-hidden rounded-2xl border border-ink-plum/10 bg-ink-plum/10 md:mt-20 md:grid-cols-3"
+    >
+      {
+        points.map((point) => (
+          <div class="bg-white p-6 md:p-8">
+            <Text variant="meta" class="text-ink-plum/40">
+              {point.label}
+            </Text>
+            <p class="mt-4 font-serif text-lg leading-snug text-ink-plum">
+              {point.text}
+            </p>
+          </div>
+        ))
+      }
+    </div>
+  </Wrapper>
+</section>

@@ -36,9 +36,9 @@ The intention is not to create contrast for its own sake. Each typeface should h
 
 **Source:** [Tiempos Text — Klim Type Foundry](https://klim.co.nz/fonts/tiempos-text/)
 
-![Tiempos Text typeface specimen placeholder](../../assets/typography/tiempos-text-specimen.png)
+![Tiempos Text typeface specimen](../../assets/typography/tiempos-text-specimen.png)
 
-*Specimen placeholder: add a licensed specimen image or an internally created typographic sample.*
+*Specimen: an internally created sample set in Tiempos Text.*
 
 Tiempos Text is the primary editorial typeface in Numena’s typographic identity.
 
@@ -72,9 +72,9 @@ Source: [klim.co.nz/fonts/tiempos-text/](https://klim.co.nz/fonts/tiempos-text/)
 
 **Source:** [Albert Sans — Google Fonts](https://fonts.google.com/specimen/Albert+Sans)
 
-![Albert Sans typeface specimen placeholder](../../assets/typography/albert-sans-specimen.png)
+![Albert Sans typeface specimen](../../assets/typography/albert-sans-specimen.png)
 
-*Specimen placeholder: add a specimen image or an internally created typographic sample.*
+*Specimen: an internally created sample set in Albert Sans.*
 
 Albert Sans is the primary functional typeface in Numena’s typographic identity.
 
@@ -300,21 +300,16 @@ Confirm the applicable license and preserve its associated license information w
 - Document the actual file names and font-family declarations used in implementation.
 - Review font loading and fallback behavior whenever the implementation changes.
 
-### Suggested asset structure
+### Asset structure
 
 ```text
 assets/
 └── typography/
-    ├── specimens/
-    │   ├── tiempos-text-specimen.png
-    │   └── albert-sans-specimen.png
-    ├── licenses/
-    │   ├── tiempos-text-license.txt
-    │   └── albert-sans-license.txt
-    └── README.md
+    ├── tiempos-text-specimen.png
+    └── albert-sans-specimen.png
 ```
 
-This is a suggested structure. Store font files only where the applicable licenses permit, and do not create placeholder license documents that could be mistaken for actual legal terms.
+Font files are stored only where the applicable licenses permit (see [`assets/README.md`](../../assets/README.md)); do not create placeholder license documents that could be mistaken for actual legal terms.
 
 ## 12. Evaluation Criteria
 

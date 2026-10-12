@@ -1,0 +1,63 @@
+---
+import { getSections } from "../lib/brand";
+
+interface Props {
+  current: string;
+  label?: string;
+}
+
+const { current, label = "Brand guide" } = Astro.props;
+const sections = getSections();
+---
+
+<nav aria-label={label} class="text-sm">
+  <ul class="space-y-9">
+    {
+      sections.map((section) => {
+        const onSection =
+          current === section.id || current.startsWith(`${section.id}/`);
+        return (
+          <li>
+            <a
+              href={`/${section.id}/`}
+              aria-current={current === section.id ? "page" : undefined}
+              class:list={[
+                "flex items-center gap-2 text-[0.6875rem] font-semibold uppercase tracking-[0.18em] outline-none transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-vibrant-purple",
+                onSection ? "text-deep-purple" : "text-ink-plum/50 hover:text-deep-purple",
+              ]}
+            >
+              <span
+                class:list={[
+                  "inline-block h-1.5 w-1.5 rounded-full",
+                  onSection ? "bg-vibrant-purple" : "bg-ink-plum/20",
+                ]}
+              />
+              {section.name}
+            </a>
+            <ul class="mt-3 space-y-0.5 border-l border-ink-plum/10">
+              {section.items.map((doc) => {
+                const active = current === doc.path;
+                return (
+                  <li>
+                    <a
+                      href={`/${doc.path}`}
+                      aria-current={active ? "page" : undefined}
+                      class:list={[
+                        "-ml-px block border-l-2 py-1.5 pl-4 pr-2 outline-none transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-vibrant-purple",
+                        active
+                          ? "border-vibrant-purple font-medium text-deep-purple"
+                          : "border-transparent text-ink-plum/65 hover:border-ink-plum/25 hover:text-ink-plum",
+                      ]}
+                    >
+                      {doc.title}
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
+          </li>
+        );
+      })
+    }
+  </ul>
+</nav>

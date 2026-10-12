@@ -1,20 +1,32 @@
 ---
-import DocLayout from "../layouts/DocLayout.astro";
+import Layout from "../layouts/Layout.astro";
+import Wrapper from "../components/Wrapper.astro";
+import Text from "../components/Text.astro";
 ---
 
-<DocLayout title="Not found">
-  <section class="mx-auto max-w-3xl px-5 py-24 sm:px-8">
-    <p class="text-xs font-medium uppercase tracking-widest text-vibrant-purple">
-      404
-    </p>
-    <h1 class="mt-2 font-serif text-3xl font-bold tracking-tight text-ink-plum">
+<Layout title="Not found">
+  <Wrapper class="py-24 md:py-32">
+    <Text variant="meta" class="text-vibrant-purple">404</Text>
+    <Text variant="display" class="mt-6 max-w-2xl">
       This page doesn't exist.
-    </h1>
-    <p class="mt-4 text-lg text-ink-plum/70">
-      The brand documents live on the <a
-        class="text-deep-purple underline underline-offset-4"
-        href="/">home page</a
+    </Text>
+    <p class="mt-6 max-w-xl text-base leading-relaxed text-ink-plum/65">
+      The brand guide lives on the
+      <a
+        href="/"
+        class="text-deep-purple underline decoration-deep-purple/30 underline-offset-4 outline-none transition-colors hover:text-vibrant-purple focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-vibrant-purple"
+        >overview page</a
+      >. You can also go straight to
+      <a
+        href="/brand-strategy/"
+        class="text-deep-purple underline decoration-deep-purple/30 underline-offset-4 outline-none transition-colors hover:text-vibrant-purple focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-vibrant-purple"
+        >Brand Strategy</a
+      > or
+      <a
+        href="/visual-identity/"
+        class="text-deep-purple underline decoration-deep-purple/30 underline-offset-4 outline-none transition-colors hover:text-vibrant-purple focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-vibrant-purple"
+        >Visual Identity</a
       >.
     </p>
-  </section>
-</DocLayout>
+  </Wrapper>
+</Layout>

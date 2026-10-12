@@ -15,6 +15,7 @@ The goal is to create a recognizable and consistent visual identity without limi
 | [`iconography.md`](./iconography.md) | Defines the icon system, sizes, color and states, and rules for using icons. |
 | [`imagery.md`](./imagery.md) | Defines the principles for selecting, creating, and using imagery in brand communications. |
 | [`layout.md`](./layout.md) | Establishes the principles for composition, spacing, alignment, hierarchy, and visual balance. |
+| [`motion-generative-patterns.md`](./motion-generative-patterns.md) | Defines watercolor-kaleidoscope motion and generative patterns, interaction principles, accessibility, and static fallbacks. |
 
 ## How to Use This Section
 

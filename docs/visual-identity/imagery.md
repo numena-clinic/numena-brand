@@ -22,6 +22,10 @@ Imagery should balance three qualities:
 - **Thoughtful:** considered, nuanced, and appropriate to the subject.
 - **Clear:** visually coherent, purposeful, and easy to interpret.
 
+![Imagery reference 01](../../assets/images/1.jpg)
+![Imagery reference 02](../../assets/images/2.jpg)
+![Imagery reference 03](../../assets/images/3.jpg)
+
 The result should feel contemporary and approachable without appearing superficial, overly clinical, or disconnected from psychological practice.
 
 ## 3. Core Principles
@@ -106,6 +110,12 @@ Lighting and color treatment should support the subject without creating an arti
 
 Avoid excessive retouching, heavy filters, and treatments that make different images feel disconnected.
 
+![Photography reference 01](../../assets/images/4.jpg)
+![Photography reference 02](../../assets/images/5.jpg)
+![Photography reference 03](../../assets/images/6.jpg)
+![Photography reference 04](../../assets/images/7.jpg)
+![Photography reference 05](../../assets/images/8.jpg)
+
 ## 5. Illustration
 
 Illustration may be used when photography cannot explain an idea clearly, when a concept is inherently abstract, or when a more controlled visual representation is appropriate.
@@ -153,6 +163,13 @@ These directions are exploratory rather than mandatory brand motifs.
 Abstract imagery should have a clear role in the composition. It should not be used merely to make an asset appear more sophisticated, scientific, or technologically advanced.
 
 Avoid visuals that imply unsupported claims about the brain, cognition, therapeutic outcomes, or psychological processes.
+
+![Abstract reference 01](../../assets/images/9.jpg)
+![Abstract reference 02](../../assets/images/10.jpg)
+![Abstract reference 03](../../assets/images/11.jpg)
+![Abstract reference 04](../../assets/images/12.jpg)
+![Abstract reference 05](../../assets/images/13.jpg)
+![Abstract reference 06](../../assets/images/14.jpg)
 
 ## 7. Imagery and Color
 
