@@ -20,19 +20,23 @@ numena-brand/
 │   │   └── messaging.md
 │   └── visual-identity/ The expression of intent.
 │       ├── README.md
+│       ├── graphic-language.md
 │       ├── color.md
 │       ├── typography.md
 │       ├── logo-system.md
+│       ├── iconography.md
 │       ├── imagery.md
 │       ├── layout.md
-  └── motion-generative-patterns.md
+│       └── motion-generative-patterns.md
 ├── assets/              Logo, imagery, illustrations, (gitignored) fonts.
+├── reports/             Audit and review reports (not part of the brand source).
 └── web/                 The brand site: renders docs/ with Astro + Tailwind + MDX.
     ├── astro.config.mjs
+    ├── scripts/         sync-assets.mjs, validate-docs.mjs.
     └── src/
-        ├── layouts/     DocLayout, header, footer (native HTML).
+        ├── layouts/     Layout and DocsLayout (native HTML).
         ├── lib/brand.ts Scans docs/ and renders the Markdown.
-        └── pages/       Home (MDX) and one page per document.
+        └── pages/       Landing, one page per document, 404.
 ```
 
 ## Source of truth

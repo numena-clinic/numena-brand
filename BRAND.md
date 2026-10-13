@@ -53,7 +53,7 @@ Source: [Messaging and Verbal Identity](docs/brand-strategy/messaging.md).
 
 **Icons:** one library, **Iconoir** (MIT), in a single regular-outline style on a 24 px grid, at four sizes only (16/20/24/32 px). Icons support the words beside them and never deliver a verdict.
 
-Sources: [Color System](docs/visual-identity/color.md), [Typography](docs/visual-identity/typography.md), [Logo System](docs/visual-identity/logo-system.md), [Iconography](docs/visual-identity/iconography.md), [Imagery](docs/visual-identity/imagery.md), [Layout](docs/visual-identity/layout.md).
+Sources: [Graphic Language](docs/visual-identity/graphic-language.md), [Color System](docs/visual-identity/color.md), [Typography](docs/visual-identity/typography.md), [Logo System](docs/visual-identity/logo-system.md), [Iconography](docs/visual-identity/iconography.md), [Imagery](docs/visual-identity/imagery.md), [Layout](docs/visual-identity/layout.md), [Motion & Generative Patterns](docs/visual-identity/motion-generative-patterns.md).
 
 ## Status
 

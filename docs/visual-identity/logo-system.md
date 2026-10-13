@@ -54,6 +54,8 @@ It should remain compatible with Numena’s evolving products and communications
 
 This section is the visual reference for Numena’s logo artwork. Each image shows the current asset from the brand repository, with its filename below.
 
+**Asset status: in review.** The embedded files are the current artwork, not approved final files. The primary, secondary, light, and symbol SVGs still carry the earlier accent colors (`#FF7C3B`, `#AC6FEC`, `#00D3F4`) that are not part of the approved palette; re-export them from the final artwork before treating them as approved. The wordmark, reversed symbol, and monochromatic variants already use only approved colors. Clear-space and minimum-size values remain pending the final files.
+
 ### 4.1 Primary Logo
 
 The primary logo is the default representation of Numena. Use it whenever the available space and context allow it to appear clearly. The primary artwork is already the dark-on-light treatment, so it is the version to use on light backgrounds.

@@ -27,6 +27,7 @@ The brand lives in [`docs/`](docs), organized into two complementary areas. Each
 | | [Iconography](docs/visual-identity/iconography.md) | Icon system (Iconoir), sizes, color and states, usage |
 | | [Imagery](docs/visual-identity/imagery.md) | Principles for photography, illustration, abstract imagery |
 | | [Layout](docs/visual-identity/layout.md) | Composition, spacing, alignment, hierarchy, balance |
+| | [Motion & Generative Patterns](docs/visual-identity/motion-generative-patterns.md) | Watercolor-kaleidoscope motion, generative patterns, interaction, accessibility |
 
 The documents describe intended direction, not validated outcomes — hypotheses and unresolved questions are stated explicitly rather than decided.
 

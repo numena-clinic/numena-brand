@@ -1,6 +1,6 @@
 # Visual Identity
 
-This section defines how Numena’s brand is expressed visually. It documents the principles, assets, and rules that guide the use of color, typography, logo, iconography, imagery, and layout across brand communications.
+This section defines how Numena’s brand is expressed visually. It documents the principles, assets, and rules that guide the use of color, typography, logo, iconography, imagery, layout, and motion across brand communications.
 
 The goal is to create a recognizable and consistent visual identity without limiting its application to a single medium or format.
 

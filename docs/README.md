@@ -18,7 +18,7 @@ Defines what Numena stands for, whom it serves, how it is positioned, and what i
 
 **The expression of intent.**
 
-Translates the brand's strategic foundations into a visual language. It defines how Numena communicates through color, typography, logo, iconography, layout, imagery, and graphic elements.
+Translates the brand's strategic foundations into a visual language. It defines how Numena communicates through color, typography, logo, iconography, layout, imagery, graphic elements, and motion.
 
 ## How They Work Together
 

@@ -25,6 +25,27 @@ The **brand** for Numena: its strategy and visual identity. A set of Markdown do
 6. **Stay in scope.** Brand only. Do not add design-system code, tokens pipelines, or product components here.
 7. **The web stack is Astro + Tailwind + MDX.** `web/` renders the documents; it is never a second source. Do not add React, Vue, Svelte, Headless UI, or another component library — prefer native HTML and small Astro components, and reach for a library only when one specific interaction genuinely requires it.
 
+## Decision hierarchy
+
+When guidance conflicts or a gap appears, resolve it in this order:
+
+1. The source document is authoritative for its subject. Edit the owner, not a summary.
+2. Approved assets win over improvised stand-ins. Do not redraw, recolour, or "improve" approved artwork.
+3. Summaries and the site restate and link only. They never override a source.
+4. Unresolved decisions stay unresolved. Do not fill a gap with a plausible-looking value.
+5. If the ambiguity genuinely changes the work, name it (or ask) instead of choosing silently.
+
+## Decision status
+
+The documents already mark unsettled guidance as hypotheses, "Validation needed," or "Status: Pending". Keep that distinction. Where a status label makes a handoff clearer, use only these:
+
+- **Approved** — settled and verified.
+- **Provisional** — usable, may still change.
+- **Pending** — blocked on artwork, testing, or a decision.
+- **Deprecated** — kept only for context.
+
+Do not add status labels where they add nothing, and never mark something Approved without evidence.
+
 ## Document format
 
 Documents in `docs/` are plain Markdown with a single `# H1` title and no front matter. Each area (`brand-strategy/`, `visual-identity/`) has a `README.md` index listing its documents; [`docs/README.md`](docs/README.md) indexes the areas. Keep the indexes and [`manifest.json`](manifest.json) in step with the files.
@@ -37,3 +58,13 @@ Documents in `docs/` are plain Markdown with a single `# H1` title and no front 
 ```sh
 cd web && npm run build
 ```
+
+Confirm, in order:
+
+1. The change is consistent with the strategic intent and, where applicable, follows the relevant visual-identity guidance.
+2. Approved assets were used correctly and nothing approved was altered.
+3. No unsupported product, clinical, psychological, market, or validation claims were introduced.
+4. Pending specifications were left pending — not filled in.
+5. Brand guidance was not confused with product design-system implementation.
+6. Indexes and asset references remain accurate.
+7. `cd web && npm run validate:docs && npm run build` was run, and the actual result reported.
