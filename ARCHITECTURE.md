@@ -24,7 +24,8 @@ numena-brand/
 │       ├── typography.md
 │       ├── logo-system.md
 │       ├── imagery.md
-│       └── layout.md
+│       ├── layout.md
+  └── motion-generative-patterns.md
 ├── assets/              Logo, imagery, illustrations, (gitignored) fonts.
 └── web/                 The brand site: renders docs/ with Astro + Tailwind + MDX.
     ├── astro.config.mjs
@@ -39,7 +40,7 @@ numena-brand/
 `docs/` is the single source of truth. It is organized into two complementary areas:
 
 - **`docs/brand-strategy/`** — the intent: what Numena stands for, whom it serves, how it is positioned, and what it communicates.
-- **`docs/visual-identity/`** — the expression of that intent: color, typography, logo, imagery, layout, and graphic elements.
+- **`docs/visual-identity/`** — the expression of that intent: color, typography, logo, imagery, layout, iconography, motion, and graphic elements.
 
 The relationship is directional: visual decisions reinforce the strategic foundations rather than existing independently. When the two appear to conflict, the strategy wins.
 
