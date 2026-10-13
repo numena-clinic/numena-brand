@@ -1,21 +1,21 @@
 {
-  "name": "numena-brand-presentation",
-  "private": true,
+  "name": "numena-brand-web",
   "version": "0.1.0",
+  "private": true,
   "type": "module",
   "scripts": {
-    "sync-assets": "node scripts/sync-assets.mjs",
-    "predev": "npm run sync-assets",
     "dev": "astro dev",
-    "prebuild": "npm run sync-assets",
+    "predev": "node scripts/sync-assets.mjs",
     "build": "astro build",
-    "preview": "astro preview"
+    "prebuild": "node scripts/sync-assets.mjs",
+    "preview": "astro preview",
+    "validate:docs": "node scripts/validate-docs.mjs"
   },
   "dependencies": {
-    "@astrojs/mdx": "^4.0.0",
-    "@tailwindcss/vite": "^4.0.0",
-    "astro": "^5.0.0",
-    "marked": "^15.0.0",
-    "tailwindcss": "^4.0.0"
+    "@astrojs/mdx": "^4.3.5",
+    "@tailwindcss/vite": "^4.3.3",
+    "astro": "^5.13.9",
+    "marked": "^15.0.12",
+    "tailwindcss": "^4.3.3"
   }
 }
