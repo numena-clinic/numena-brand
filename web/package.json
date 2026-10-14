@@ -12,9 +12,9 @@
     "validate:docs": "node scripts/validate-docs.mjs"
   },
   "dependencies": {
-    "@astrojs/mdx": "^4.3.5",
+    "@astrojs/mdx": "^8.0.3",
     "@tailwindcss/vite": "^4.3.3",
-    "astro": "^5.13.9",
+    "astro": "^7.3.8",
     "marked": "^15.0.12",
     "tailwindcss": "^4.3.3"
   }
